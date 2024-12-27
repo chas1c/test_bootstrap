@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="Форма_КоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ВсеВзаиморасчеты" id="18">
@@ -7,7 +11,6 @@
 				<SkipOnInput>false</SkipOnInput>
 				<CommandName>Form.Command.ВсеВзаиморасчеты</CommandName>
 				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
 				<BorderColor>style:BorderColor</BorderColor>
 				<Title>
 					<v8:item>
@@ -22,16 +25,16 @@
 	<ChildItems>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
 			<SkipOnInput>false</SkipOnInput>
 			<DefaultItem>true</DefaultItem>
 			<HeightInTableRows>10</HeightInTableRows>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<RowSelectionMode>Cell</RowSelectionMode>
 			<EnableStartDrag>true</EnableStartDrag>
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<BorderColor>style:BorderColor</BorderColor>
+			<ShowCommandBar>auto</ShowCommandBar>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -73,6 +76,7 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="34"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="35"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокПанельДействийВыделенныхСтрок" id="36"/>
 			<ChildItems>
 				<LabelField name="Период" id="4">
 					<DataPath>Список.Period</DataPath>
@@ -85,6 +89,7 @@
 					</Title>
 					<ContextMenu name="Период_КонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ПериодExtendedTooltip" id="21"/>
+					<SelectedItemsActionsPanel name="ПериодПанельДействийВыделенныхСтрок" id="37"/>
 				</LabelField>
 				<LabelField name="Регистратор" id="6">
 					<DataPath>Список.Recorder</DataPath>
@@ -96,6 +101,7 @@
 					</Title>
 					<ContextMenu name="Регистратор_КонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="РегистраторExtendedTooltip" id="22"/>
+					<SelectedItemsActionsPanel name="РегистраторПанельДействийВыделенныхСтрок" id="38"/>
 				</LabelField>
 				<LabelField name="НомерСтроки" id="8">
 					<DataPath>Список.LineNumber</DataPath>
@@ -107,6 +113,7 @@
 					</Title>
 					<ContextMenu name="НомерСтроки_КонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="НомерСтрокиExtendedTooltip" id="23"/>
+					<SelectedItemsActionsPanel name="НомерСтрокиПанельДействийВыделенныхСтрок" id="39"/>
 				</LabelField>
 				<LabelField name="Контрагент" id="10">
 					<DataPath>Список.Контрагент</DataPath>
@@ -118,6 +125,7 @@
 					</Title>
 					<ContextMenu name="Контрагент_КонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="КонтрагентExtendedTooltip" id="24"/>
+					<SelectedItemsActionsPanel name="КонтрагентПанельДействийВыделенныхСтрок" id="40"/>
 				</LabelField>
 				<LabelField name="Сумма" id="14">
 					<DataPath>Список.Сумма</DataPath>
@@ -129,6 +137,7 @@
 					</Title>
 					<ContextMenu name="Сумма_КонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="СуммаExtendedTooltip" id="25"/>
+					<SelectedItemsActionsPanel name="СуммаПанельДействийВыделенныхСтрок" id="41"/>
 				</LabelField>
 				<LabelField name="Валюта" id="12">
 					<DataPath>Список.Валюта</DataPath>
@@ -140,6 +149,7 @@
 					</Title>
 					<ContextMenu name="Валюта_КонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ВалютаExtendedTooltip" id="26"/>
+					<SelectedItemsActionsPanel name="ВалютаПанельДействийВыделенныхСтрок" id="42"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

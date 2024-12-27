@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаОткрытьСОсновногоСервера" id="43">
@@ -30,19 +34,20 @@
 			</ToolTip>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="33"/>
 		</UsualGroup>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<RowSelectionMode>Cell</RowSelectionMode>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<ShowCommandBar>auto</ShowCommandBar>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -59,9 +64,7 @@
 			<UserSettingsGroup>Настройки</UserSettingsGroup>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="34">
 				<AdditionSource>
@@ -87,6 +90,7 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="41"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="42"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокПанельДействийВыделенныхСтрок" id="47"/>
 			<ChildItems>
 				<LabelField name="Дата" id="5">
 					<DataPath>Список.Date</DataPath>
@@ -94,49 +98,81 @@
 					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="6"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="7"/>
+					<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="48"/>
 				</LabelField>
 				<LabelField name="Номер" id="8">
 					<DataPath>Список.Number</DataPath>
 					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="НомерКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="10"/>
+					<SelectedItemsActionsPanel name="НомерПанельДействийВыделенныхСтрок" id="49"/>
 				</LabelField>
 				<LabelField name="Организация" id="11">
 					<DataPath>Список.Организация</DataPath>
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="13"/>
+					<SelectedItemsActionsPanel name="ОрганизацияПанельДействийВыделенныхСтрок" id="50"/>
 				</LabelField>
 				<LabelField name="Покупатель" id="14">
 					<DataPath>Список.Покупатель</DataPath>
 					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="ПокупательКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ПокупательРасширеннаяПодсказка" id="16"/>
+					<SelectedItemsActionsPanel name="ПокупательПанельДействийВыделенныхСтрок" id="51"/>
 				</LabelField>
+				<LabelField name="СостояниеЗаказа" id="26">
+					<DataPath>Список.СостояниеЗаказа</DataPath>
+					<FixingInTable>Left</FixingInTable>
+					<ContextMenu name="СостояниеЗаказаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СостояниеЗаказаРасширеннаяПодсказка" id="28"/>
+					<SelectedItemsActionsPanel name="СостояниеЗаказаПанельДействийВыделенныхСтрок" id="55"/>
+				</LabelField>
+				<ColumnGroup name="СуммаДокуента" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="СуммаДокуентаРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<LabelField name="Сумма" id="62">
+							<DataPath>Список.Сумма</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="64"/>
+							<SelectedItemsActionsPanel name="СуммаПанельДействийВыделенныхСтрок" id="65"/>
+						</LabelField>
+						<LabelField name="Валюта" id="20">
+							<DataPath>Список.Валюта</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВалютаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="22"/>
+							<SelectedItemsActionsPanel name="ВалютаПанельДействийВыделенныхСтрок" id="53"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
 				<LabelField name="Склад" id="17">
 					<DataPath>Список.Склад</DataPath>
-					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="СкладКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="19"/>
-				</LabelField>
-				<LabelField name="Валюта" id="20">
-					<DataPath>Список.Валюта</DataPath>
-					<ContextMenu name="ВалютаКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="22"/>
+					<SelectedItemsActionsPanel name="СкладПанельДействийВыделенныхСтрок" id="52"/>
 				</LabelField>
 				<LabelField name="ВидЦен" id="23">
 					<DataPath>Список.ВидЦен</DataPath>
 					<ContextMenu name="ВидЦенКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ВидЦенРасширеннаяПодсказка" id="25"/>
-				</LabelField>
-				<LabelField name="СостояниеЗаказа" id="26">
-					<DataPath>Список.СостояниеЗаказа</DataPath>
-					<ContextMenu name="СостояниеЗаказаКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="СостояниеЗаказаРасширеннаяПодсказка" id="28"/>
+					<SelectedItemsActionsPanel name="ВидЦенПанельДействийВыделенныхСтрок" id="54"/>
 				</LabelField>
 				<LabelField name="Автор" id="29">
 					<DataPath>Список.Автор</DataPath>
 					<ContextMenu name="АвторКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="31"/>
+					<SelectedItemsActionsPanel name="АвторПанельДействийВыделенныхСтрок" id="56"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -229,5 +265,45 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Организация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Организация</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипОтметки</dcscor:parameter>
+						<dcscor:value xsi:type="lf:TableCellMarkType">ShapeUnderTextOval</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СостояниеЗаказа</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.СостояниеЗаказа</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипОтметки</dcscor:parameter>
+						<dcscor:value xsi:type="lf:TableCellMarkType">ShapeUnderTextOval</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 </Form>

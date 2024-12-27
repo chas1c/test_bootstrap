@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Настройки</v8:content>
 		</v8:item>
 	</Title>
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
 	<CommandBarLocation>None</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>false</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -45,6 +47,8 @@
 							<v8:content>Геопозиционирование</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГеопозиционированиеРасширеннаяПодсказка" id="33"/>
 					<ChildItems>
 						<InputField name="НаборКонстантВыборПровайдераГеопозиционирования" id="34">
@@ -58,6 +62,7 @@
 							<TitleLocation>Top</TitleLocation>
 							<ContextMenu name="НаборКонстантВыборПровайдераГеопозиционированияКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="НаборКонстантВыборПровайдераГеопозиционированияРасширеннаяПодсказка" id="36"/>
+							<SelectedItemsActionsPanel name="НаборКонстантВыборПровайдераГеопозиционированияПанельДействийВыделенныхСтрок" id="75"/>
 							<Events>
 								<Event name="OnChange">НаборКонстантВыборПровайдераГеопозиционированияПриИзменении</Event>
 							</Events>
@@ -74,6 +79,7 @@
 							<ChoiceButton>true</ChoiceButton>
 							<ContextMenu name="НаборКонстантИмяПровайдераКонтекстноеМеню" id="50"/>
 							<ExtendedTooltip name="НаборКонстантИмяПровайдераРасширеннаяПодсказка" id="51"/>
+							<SelectedItemsActionsPanel name="НаборКонстантИмяПровайдераПанельДействийВыделенныхСтрок" id="76"/>
 							<Events>
 								<Event name="OnChange">НаборКонстантИмяПровайдераПриИзменении</Event>
 								<Event name="StartChoice">НаборКонстантИмяПровайдераНачалоВыбора</Event>
@@ -101,6 +107,7 @@
 									<CheckBoxType>Switcher</CheckBoxType>
 									<ContextMenu name="НаборКонстантТолькоБесплатныеКонтекстноеМеню" id="38"/>
 									<ExtendedTooltip name="НаборКонстантТолькоБесплатныеРасширеннаяПодсказка" id="39"/>
+									<SelectedItemsActionsPanel name="НаборКонстантТолькоБесплатныеПанельДействийВыделенныхСтрок" id="77"/>
 									<Events>
 										<Event name="OnChange">НаборКонстантТолькоБесплатныеПриИзменении</Event>
 									</Events>
@@ -110,6 +117,7 @@
 									<CheckBoxType>Switcher</CheckBoxType>
 									<ContextMenu name="НаборКонстантИспользоватьСотовуюСетьКонтекстноеМеню" id="41"/>
 									<ExtendedTooltip name="НаборКонстантИспользоватьСотовуюСетьРасширеннаяПодсказка" id="42"/>
+									<SelectedItemsActionsPanel name="НаборКонстантИспользоватьСотовуюСетьПанельДействийВыделенныхСтрок" id="78"/>
 									<Events>
 										<Event name="OnChange">НаборКонстантИспользоватьСотовуюСетьПриИзменении</Event>
 									</Events>
@@ -119,6 +127,7 @@
 									<CheckBoxType>Switcher</CheckBoxType>
 									<ContextMenu name="НаборКонстантИспользоватьСетьПередачиДанныхКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="НаборКонстантИспользоватьСетьПередачиДанныхРасширеннаяПодсказка" id="45"/>
+									<SelectedItemsActionsPanel name="НаборКонстантИспользоватьСетьПередачиДанныхПанельДействийВыделенныхСтрок" id="79"/>
 									<Events>
 										<Event name="OnChange">НаборКонстантИспользоватьСетьПередачиДанныхПриИзменении</Event>
 									</Events>
@@ -128,6 +137,7 @@
 									<CheckBoxType>Switcher</CheckBoxType>
 									<ContextMenu name="НаборКонстантИспользоватьСпутникиКонтекстноеМеню" id="47"/>
 									<ExtendedTooltip name="НаборКонстантИспользоватьСпутникиРасширеннаяПодсказка" id="48"/>
+									<SelectedItemsActionsPanel name="НаборКонстантИспользоватьСпутникиПанельДействийВыделенныхСтрок" id="80"/>
 									<Events>
 										<Event name="OnChange">НаборКонстантИспользоватьСпутникиПриИзменении</Event>
 									</Events>
@@ -149,6 +159,8 @@
 							<v8:content>Прочие</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ПрочиеРасширеннаяПодсказка" id="26"/>
 					<ChildItems>
 						<UsualGroup name="ОтметкаНаФотоснимке" id="62">
@@ -181,6 +193,7 @@
 											<v8:content>Дата</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>HorizontalIfPossible</Group>
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -197,6 +210,7 @@
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="НаборКонстантОтметкаНаФотоснимкеДатаКонтекстноеМеню" id="67"/>
 											<ExtendedTooltip name="НаборКонстантОтметкаНаФотоснимкеДатаРасширеннаяПодсказка" id="68"/>
+											<SelectedItemsActionsPanel name="НаборКонстантОтметкаНаФотоснимкеДатаПанельДействийВыделенныхСтрок" id="81"/>
 											<Events>
 												<Event name="OnChange">НаборКонстантОтметкаНаФотоснимкеДатаПриИзменении</Event>
 											</Events>
@@ -213,6 +227,7 @@
 									</Title>
 									<ContextMenu name="НаборКонстантОтметкаНаФотоснимкеТекстКонтекстноеМеню" id="73"/>
 									<ExtendedTooltip name="НаборКонстантОтметкаНаФотоснимкеТекстРасширеннаяПодсказка" id="74"/>
+									<SelectedItemsActionsPanel name="НаборКонстантОтметкаНаФотоснимкеТекстПанельДействийВыделенныхСтрок" id="82"/>
 									<Events>
 										<Event name="OnChange">НаборКонстантОтметкаНаФотоснимкеТекстПриИзменении</Event>
 									</Events>
@@ -247,6 +262,7 @@
 									<CheckBoxType>Switcher</CheckBoxType>
 									<ContextMenu name="НаборКонстантВоспроизводитьТекстУведомленияКонтекстноеМеню" id="60"/>
 									<ExtendedTooltip name="НаборКонстантВоспроизводитьТекстУведомленияРасширеннаяПодсказка" id="61"/>
+									<SelectedItemsActionsPanel name="НаборКонстантВоспроизводитьТекстУведомленияПанельДействийВыделенныхСтрок" id="83"/>
 									<Events>
 										<Event name="OnChange">НаборКонстантВоспроизводитьТекстУведомленияПриИзменении</Event>
 									</Events>

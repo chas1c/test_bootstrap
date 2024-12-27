@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<EnterKeyBehavior>DefaultButton</EnterKeyBehavior>
-	<CommandBarLocation>Bottom</CommandBarLocation>
+	<Group>Vertical</Group>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="Обновить" id="24">
@@ -9,7 +10,6 @@
 				<SkipOnInput>false</SkipOnInput>
 				<CommandName>Form.Command.Обновить</CommandName>
 				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
 				<BorderColor>style:BorderColor</BorderColor>
 				<ExtendedTooltip name="ОбновитьExtendedTooltip" id="36"/>
 			</Button>
@@ -18,7 +18,6 @@
 				<SkipOnInput>false</SkipOnInput>
 				<CommandName>Form.Command.Скопировать</CommandName>
 				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
 				<BorderColor>style:BorderColor</BorderColor>
 				<ExtendedTooltip name="СкопироватьExtendedTooltip" id="37"/>
 			</Button>
@@ -27,7 +26,6 @@
 				<SkipOnInput>false</SkipOnInput>
 				<CommandName>Form.Command.Удалить</CommandName>
 				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
 				<BorderColor>style:BorderColor</BorderColor>
 				<ExtendedTooltip name="УдалитьExtendedTooltip" id="38"/>
 			</Button>
@@ -43,56 +41,48 @@
 			<ListChoiceMode>true</ListChoiceMode>
 			<TextEdit>false</TextEdit>
 			<ChoiceListButton>true</ChoiceListButton>
-			<BorderColor>style:BorderColor</BorderColor>
+			<Picture>
+				<xr:Ref>StdPicture.User</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ПользовательExtendedTooltip" id="39"/>
+			<SelectedItemsActionsPanel name="ПользовательПанельДействийВыделенныхСтрок" id="54"/>
 			<Events>
 				<Event name="OnChange">ПользовательПриИзменении</Event>
 			</Events>
 		</InputField>
-		<UsualGroup name="ГруппаПоиск" id="33">
-			<ToolTip>
+		<InputField name="Поиск" id="18">
+			<DataPath>Поиск</DataPath>
+			<Wrap>false</Wrap>
+			<ClearButton>true</ClearButton>
+			<InputHint>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа поиск</v8:content>
+					<v8:content>Поиск</v8:content>
 				</v8:item>
-			</ToolTip>
-			<Group>Horizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаПоискExtendedTooltip" id="40"/>
-			<ChildItems>
-				<InputField name="Поиск" id="18">
-					<DataPath>Поиск</DataPath>
-					<Wrap>false</Wrap>
-					<ClearButton>true</ClearButton>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ContextMenu name="ПоискКонтекстноеМеню" id="19"/>
-					<ExtendedTooltip name="ПоискExtendedTooltip" id="41"/>
-					<Events>
-						<Event name="OnChange">ПоискПриИзменении</Event>
-					</Events>
-				</InputField>
-				<Button name="Искать" id="32">
-					<Type>UsualButton</Type>
-					<DefaultButton>true</DefaultButton>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.Искать</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ИскатьExtendedTooltip" id="42"/>
-				</Button>
-			</ChildItems>
-		</UsualGroup>
+			</InputHint>
+			<Picture>
+				<xr:Ref>StdPicture.DataSearch</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="ПоискКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ПоискExtendedTooltip" id="41"/>
+			<SelectedItemsActionsPanel name="ПоискПанельДействийВыделенныхСтрок" id="55"/>
+			<Events>
+				<Event name="OnChange">ПоискПриИзменении</Event>
+				<Event name="AutoComplete">ПоискАвтоПодбор</Event>
+			</Events>
+		</InputField>
 		<Table name="ОтфильтрованныеФормы" id="27">
 			<Representation>List</Representation>
 			<TitleLocation>Top</TitleLocation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<ReadOnly>true</ReadOnly>
 			<SkipOnInput>false</SkipOnInput>
+			<RowSelectionMode>Cell</RowSelectionMode>
 			<Header>false</Header>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>ОтфильтрованныеФормы</DataPath>
@@ -134,13 +124,14 @@
 				<ContextMenu name="ОтфильтрованныеФормыУправлениеПоискомКонтекстноеМеню" id="52"/>
 				<ExtendedTooltip name="ОтфильтрованныеФормыУправлениеПоискомРасширеннаяПодсказка" id="53"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ОтфильтрованныеФормыПанельДействийВыделенныхСтрок" id="56"/>
 			<ChildItems>
 				<InputField name="Значение" id="34">
 					<DataPath>ОтфильтрованныеФормы.Value</DataPath>
 					<Wrap>false</Wrap>
-					<BorderColor>style:BorderColor</BorderColor>
 					<ContextMenu name="ЗначениеКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ЗначениеExtendedTooltip" id="44"/>
+					<SelectedItemsActionsPanel name="ЗначениеПанельДействийВыделенныхСтрок" id="57"/>
 				</InputField>
 			</ChildItems>
 		</Table>
@@ -276,7 +267,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ОбновитьСписокНастроекФорм</v8:content>
+					<v8:content>Обновить список настроек форм</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -316,22 +307,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьВыполнить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="Искать" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Искать</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Искать</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ИскатьВыполнить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

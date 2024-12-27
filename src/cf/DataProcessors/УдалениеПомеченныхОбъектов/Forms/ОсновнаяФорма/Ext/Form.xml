@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Удаление помеченных объектов</v8:content>
 		</v8:item>
 	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
 	<AutoFillCheck>false</AutoFillCheck>
 	<Customizable>false</Customizable>
-	<CommandBarLocation>None</CommandBarLocation>
+	<CommandBarLocation>Top</CommandBarLocation>
 	<CommandSet>
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
@@ -21,8 +23,55 @@
 		<ExcludedCommand>SaveValues</ExcludedCommand>
 		<ExcludedCommand>Yes</ExcludedCommand>
 	</CommandSet>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="Форма_КоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КомандаУдалить" id="45">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.КомандаУдалить</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="КомандаУдалитьExtendedTooltip" id="62"/>
+			</Button>
+			<Button name="КомандаДалее" id="3">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.КомандаДалее</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Далее &gt;&gt;</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КомандаДалееExtendedTooltip" id="63"/>
+			</Button>
+			<Button name="Закрыть" id="4">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Representation>Text</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="64"/>
+			</Button>
+			<Button name="Справка" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<ExtendedTooltip name="СправкаExtendedTooltip" id="65"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -58,6 +107,8 @@
 							<v8:content>Выбор режима удаления</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ВыборРежимаУдаленияExtendedTooltip" id="47"/>
 					<ChildItems>
 						<RadioButtonField name="РежимУдаления" id="15">
@@ -103,6 +154,7 @@
 							</ChoiceList>
 							<ContextMenu name="РежимУдаления_КонтекстноеМеню" id="16"/>
 							<ExtendedTooltip name="РежимУдаленияExtendedTooltip" id="48"/>
+							<SelectedItemsActionsPanel name="РежимУдаленияПанельДействийВыделенныхСтрок" id="86"/>
 							<Events>
 								<Event name="OnChange">РежимУдаленияПриИзменении</Event>
 							</Events>
@@ -122,6 +174,8 @@
 							<v8:content>Результаты удаления</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="РезультатыУдаленияExtendedTooltip" id="49"/>
 					<ChildItems>
 						<LabelField name="СтрокаРезультатов" id="35">
@@ -138,6 +192,7 @@
 							<Height>4</Height>
 							<ContextMenu name="СтрокаРезультатов_КонтекстноеМеню" id="36"/>
 							<ExtendedTooltip name="СтрокаРезультатовExtendedTooltip" id="50"/>
+							<SelectedItemsActionsPanel name="СтрокаРезультатовПанельДействийВыделенныхСтрок" id="87"/>
 						</LabelField>
 					</ChildItems>
 				</Page>
@@ -155,6 +210,8 @@
 							<v8:content>Причины неудаления</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ПричиныНеудаленияExtendedTooltip" id="51"/>
 					<ChildItems>
 						<Table name="ДеревоНеудаленныхОбъектов" id="40">
@@ -165,13 +222,15 @@
 							<SkipOnInput>false</SkipOnInput>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<RowSelectionMode>Cell</RowSelectionMode>
 							<Header>false</Header>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>ДеревоНеудаленныхОбъектов</DataPath>
-							<RowPictureDataPath>ДеревоНеудаленныхОбъектов.НомерКартинки</RowPictureDataPath>
+							<RowPictureDataPath>ДеревоНеудаленныхОбъектов.Картинка</RowPictureDataPath>
 							<RowsPicture>
-								<xr:Ref>CommonPicture.КоллекцияДляПомеченныхНаУдалениеОбъектов</xr:Ref>
+								<xr:Ref>0:115d5d06-a2fc-453e-aab5-c869b6d5850b</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 								<xr:TransparentPixel x="8" y="5"/>
 							</RowsPicture>
@@ -228,18 +287,46 @@
 								<ContextMenu name="ДеревоНеудаленныхОбъектовУправлениеПоискомКонтекстноеМеню" id="73"/>
 								<ExtendedTooltip name="ДеревоНеудаленныхОбъектовУправлениеПоискомРасширеннаяПодсказка" id="74"/>
 							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="ДеревоНеудаленныхОбъектовПанельДействийВыделенныхСтрок" id="88"/>
 							<Events>
 								<Event name="Selection">ДеревоНеудаленныхОбъектовВыбор</Event>
 							</Events>
 							<ChildItems>
-								<InputField name="Представление1" id="43">
-									<DataPath>ДеревоНеудаленныхОбъектов.Представление</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<Wrap>false</Wrap>
-									<BorderColor>style:BorderColor</BorderColor>
-									<ContextMenu name="Представление1_КонтекстноеМеню" id="44"/>
-									<ExtendedTooltip name="Представление1ExtendedTooltip" id="53"/>
-								</InputField>
+								<ColumnGroup name="ДеревоНеудаленныхОбъектовГруппаКартинкаИПредставление" id="134">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево неудаленных объектов группа картинка и представление</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево неудаленных объектов группа картинка и представление</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ДеревоНеудаленныхОбъектовГруппаКартинкаИПредставлениеРасширеннаяПодсказка" id="135"/>
+									<ChildItems>
+										<PictureField name="Картинка" id="130">
+											<DataPath>ДеревоНеудаленныхОбъектов.Картинка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="КартинкаКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="КартинкаРасширеннаяПодсказка" id="132"/>
+											<SelectedItemsActionsPanel name="КартинкаПанельДействийВыделенныхСтрок" id="133"/>
+										</PictureField>
+										<InputField name="Представление1" id="43">
+											<DataPath>ДеревоНеудаленныхОбъектов.Представление</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Wrap>false</Wrap>
+											<ContextMenu name="Представление1_КонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="Представление1ExtendedTooltip" id="53"/>
+											<SelectedItemsActionsPanel name="Представление1ПанельДействийВыделенныхСтрок" id="89"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -257,6 +344,8 @@
 							<v8:content>Помеченные на удаление</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ПомеченныеНаУдалениеExtendedTooltip" id="54"/>
 					<ChildItems>
 						<Table name="СписокПомеченныхНаУдаление" id="26">
@@ -265,7 +354,10 @@
 							<SkipOnInput>false</SkipOnInput>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
 							<Header>false</Header>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>СписокПомеченныхНаУдаление</DataPath>
@@ -281,7 +373,6 @@
 							<SearchControlLocation>None</SearchControlLocation>
 							<ContextMenu name="СписокПомеченныхНаУдаление_КонтекстноеМеню" id="27"/>
 							<AutoCommandBar name="СписокПомеченныхНаУдаление_КоманднаяПанель" id="28">
-								<HorizontalAlign>Right</HorizontalAlign>
 								<Autofill>false</Autofill>
 								<ChildItems>
 									<ButtonGroup name="ГруппаКнопокПометки" id="84">
@@ -302,20 +393,32 @@
 										<ChildItems>
 											<Button name="КомандаСписокПомеченныхУстановитьВсе" id="37">
 												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
 												<SkipOnInput>false</SkipOnInput>
 												<CommandName>Form.Command.КомандаСписокПомеченныхУстановитьВсе</CommandName>
 												<TextColor>style:ButtonTextColor</TextColor>
-												<BackColor>style:ButtonBackColor</BackColor>
 												<BorderColor>style:BorderColor</BorderColor>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Включить все</v8:content>
+													</v8:item>
+												</Title>
 												<ExtendedTooltip name="КомандаСписокПомеченныхУстановитьВсеExtendedTooltip" id="55"/>
 											</Button>
 											<Button name="КомандаСписокПомеченныхСнятьВсе" id="38">
 												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
 												<SkipOnInput>false</SkipOnInput>
 												<CommandName>Form.Command.КомандаСписокПомеченныхСнятьВсе</CommandName>
 												<TextColor>style:ButtonTextColor</TextColor>
-												<BackColor>style:ButtonBackColor</BackColor>
 												<BorderColor>style:BorderColor</BorderColor>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Выключить все</v8:content>
+													</v8:item>
+												</Title>
 												<ExtendedTooltip name="КомандаСписокПомеченныхСнятьВсеExtendedTooltip" id="56"/>
 											</Button>
 										</ChildItems>
@@ -347,6 +450,7 @@
 								<ContextMenu name="СписокПомеченныхНаУдалениеУправлениеПоискомКонтекстноеМеню" id="82"/>
 								<ExtendedTooltip name="СписокПомеченныхНаУдалениеУправлениеПоискомРасширеннаяПодсказка" id="83"/>
 							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="СписокПомеченныхНаУдалениеПанельДействийВыделенныхСтрок" id="92"/>
 							<Events>
 								<Event name="Selection">СписокПомеченныхНаУдалениеВыбор</Event>
 							</Events>
@@ -374,6 +478,7 @@
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="Пометка_КонтекстноеМеню" id="31"/>
 											<ExtendedTooltip name="ПометкаExtendedTooltip" id="59"/>
+											<SelectedItemsActionsPanel name="ПометкаПанельДействийВыделенныхСтрок" id="93"/>
 											<Events>
 												<Event name="OnChange">ПометкаПриИзменении</Event>
 											</Events>
@@ -384,9 +489,9 @@
 											<ShowInHeader>false</ShowInHeader>
 											<ShowInFooter>false</ShowInFooter>
 											<Wrap>false</Wrap>
-											<BorderColor>style:BorderColor</BorderColor>
 											<ContextMenu name="Представление_КонтекстноеМеню" id="33"/>
 											<ExtendedTooltip name="ПредставлениеExtendedTooltip" id="60"/>
+											<SelectedItemsActionsPanel name="ПредставлениеПанельДействийВыделенныхСтрок" id="94"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -396,71 +501,6 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<CommandBar name="КомандыФормы" id="2">
-			<EnableContentChange>true</EnableContentChange>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команды формы</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команды формы</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalLocation>Right</HorizontalLocation>
-			<ExtendedTooltip name="КомандыФормыExtendedTooltip" id="61"/>
-			<ChildItems>
-				<Button name="КомандаУдалить" id="45">
-					<Type>CommandBarButton</Type>
-					<Representation>PictureAndText</Representation>
-					<DefaultButton>true</DefaultButton>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.КомандаУдалить</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="КомандаУдалитьExtendedTooltip" id="62"/>
-				</Button>
-				<Button name="КомандаДалее" id="3">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.КомандаДалее</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Далее &gt;&gt;</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="КомандаДалееExtendedTooltip" id="63"/>
-				</Button>
-				<Button name="Закрыть" id="4">
-					<Type>CommandBarButton</Type>
-					<Representation>PictureAndText</Representation>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.StandardCommand.Close</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="64"/>
-				</Button>
-				<Button name="Справка" id="5">
-					<Type>CommandBarButton</Type>
-					<Representation>PictureAndText</Representation>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.StandardCommand.Help</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="СправкаExtendedTooltip" id="65"/>
-				</Button>
-			</ChildItems>
-		</CommandBar>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -565,20 +605,9 @@
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Columns>
-				<Column name="НомерКартинки" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Номер картинки</v8:content>
-						</v8:item>
-					</Title>
+				<Column name="Картинка" id="1">
 					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>1</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-						</v8:NumberQualifiers>
+						<v8:Type>v8ui:Picture</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Значение" id="2">
@@ -655,6 +684,7 @@
 			</Title>
 			<Action>ВыполнитьДалее</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
 		</Command>
 		<Command name="КомандаСписокПомеченныхУстановитьВсе" id="2">
 			<Title>
@@ -703,18 +733,9 @@
 					<v8:content>Удалить</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда удалить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.DeleteListItemDirectly</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>ВыполнитьУдаление</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
 		</Command>
 	</Commands>
 </Form>

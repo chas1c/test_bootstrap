@@ -1,15 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Сохранение варианта отчета</v8:content>
 		</v8:item>
 	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<EnterKeyBehavior>DefaultButton</EnterKeyBehavior>
 	<AutoTitle>false</AutoTitle>
-	<CommandBarLocation>None</CommandBarLocation>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Сохранить" id="7">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="СохранитьExtendedTooltip" id="19"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -22,8 +38,9 @@
 			<Width>40</Width>
 			<HeightInTableRows>10</HeightInTableRows>
 			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Row</RowSelectionMode>
 			<Header>false</Header>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<RowActionsShowType>ShowOnHover</RowActionsShowType>
 			<EnableStartDrag>true</EnableStartDrag>
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>СписокНастроек</DataPath>
@@ -64,18 +81,10 @@
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокНастроекКонтекстноеМеню" id="3">
 				<Autofill>false</Autofill>
-				<ChildItems>
-					<Button name="Удалить" id="12">
-						<Type>CommandBarButton</Type>
-						<SkipOnInput>false</SkipOnInput>
-						<CommandName>Form.Item.СписокНастроек.StandardCommand.Delete</CommandName>
-						<TextColor>style:ButtonTextColor</TextColor>
-						<BackColor>style:ButtonBackColor</BackColor>
-						<ExtendedTooltip name="УдалитьExtendedTooltip" id="14"/>
-					</Button>
-				</ChildItems>
 			</ContextMenu>
-			<AutoCommandBar name="СписокНастроекКоманднаяПанель" id="10"/>
+			<AutoCommandBar name="СписокНастроекКоманднаяПанель" id="10">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
 			<ExtendedTooltip name="СписокНастроекExtendedTooltip" id="15"/>
 			<SearchStringAddition name="СписокНастроекСтрокаПоиска" id="22">
 				<AdditionSource>
@@ -101,6 +110,7 @@
 				<ContextMenu name="СписокНастроекУправлениеПоискомКонтекстноеМеню" id="29"/>
 				<ExtendedTooltip name="СписокНастроекУправлениеПоискомРасширеннаяПодсказка" id="30"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокНастроекПанельДействийВыделенныхСтрок" id="31"/>
 			<Events>
 				<Event name="Selection">СписокНастроекВыбор</Event>
 				<Event name="BeforeAddRow">СписокНастроекПередНачаломДобавления</Event>
@@ -113,9 +123,19 @@
 					<DataPath>СписокНастроек.Description</DataPath>
 					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 					<Wrap>false</Wrap>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5">
+						<ChildItems>
+							<Button name="Удалить" id="12">
+								<Type>CommandBarButton</Type>
+								<SkipOnInput>false</SkipOnInput>
+								<CommandName>Form.Item.СписокНастроек.StandardCommand.Delete</CommandName>
+								<TextColor>style:ButtonTextColor</TextColor>
+								<ExtendedTooltip name="УдалитьExtendedTooltip" id="14"/>
+							</Button>
+						</ChildItems>
+					</ContextMenu>
 					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="16"/>
+					<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="32"/>
 				</InputField>
 			</ChildItems>
 		</Table>
@@ -131,44 +151,10 @@
 			<TitleLocation>Top</TitleLocation>
 			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 			<Wrap>false</Wrap>
-			<BorderColor>style:BorderColor</BorderColor>
 			<ContextMenu name="ИмяСохраняемойНастройкиКонтекстноеМеню" id="6"/>
 			<ExtendedTooltip name="ИмяСохраняемойНастройкиExtendedTooltip" id="17"/>
+			<SelectedItemsActionsPanel name="ИмяСохраняемойНастройкиПанельДействийВыделенныхСтрок" id="34"/>
 		</InputField>
-		<CommandBar name="Группа" id="13">
-			<HorizontalLocation>Right</HorizontalLocation>
-			<ExtendedTooltip name="ГруппаExtendedTooltip" id="18"/>
-			<ChildItems>
-				<Button name="Сохранить" id="7">
-					<Type>CommandBarButton</Type>
-					<DefaultButton>true</DefaultButton>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.Сохранить</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="СохранитьExtendedTooltip" id="19"/>
-				</Button>
-				<Button name="Отменить" id="9">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.StandardCommand.Cancel</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ОтменитьExtendedTooltip" id="20"/>
-				</Button>
-				<Button name="Справка" id="11">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.StandardCommand.Help</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="СправкаExtendedTooltip" id="21"/>
-				</Button>
-			</ChildItems>
-		</CommandBar>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СписокНастроек" id="1">
@@ -268,6 +254,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СохранитьВыполнить</Action>
+			<ActionPurpose>Finish</ActionPurpose>
 		</Command>
 	</Commands>
 	<Parameters>

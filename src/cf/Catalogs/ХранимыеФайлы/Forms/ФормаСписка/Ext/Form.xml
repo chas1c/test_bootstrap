@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
 		<ChildItems>
 			<Button name="Создать" id="12">
 				<Type>CommandBarButton</Type>
@@ -9,72 +12,16 @@
 				<CommandName>Form.StandardCommand.Create</CommandName>
 				<ExtendedTooltip name="СоздатьExtendedTooltip" id="19"/>
 			</Button>
-			<ButtonGroup name="Расширенные" id="10">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Расширенные</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Расширенные</v8:content>
-					</v8:item>
-				</ToolTip>
-				<ExtendedTooltip name="РасширенныеExtendedTooltip" id="20"/>
-				<ChildItems>
-					<Button name="СкачатьАрхивом" id="48">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.СкачатьАрхивом</CommandName>
-						<ExtendedTooltip name="СкачатьАрхивомРасширеннаяПодсказка" id="49"/>
-					</Button>
-					<Button name="ЗагрузитьФайлы" id="8">
-						<Type>CommandBarButton</Type>
-						<SkipOnInput>false</SkipOnInput>
-						<CommandName>Form.Command.ЗагрузитьФайлы</CommandName>
-						<ExtendedTooltip name="ЗагрузитьФайлыExtendedTooltip" id="21"/>
-					</Button>
-					<Button name="ОткрытьФайл" id="9">
-						<Type>CommandBarButton</Type>
-						<SkipOnInput>false</SkipOnInput>
-						<CommandName>Form.Command.ОткрытьФайл</CommandName>
-						<ExtendedTooltip name="ОткрытьФайлExtendedTooltip" id="22"/>
-					</Button>
-					<Button name="ФормаСканироватьДокумент" id="50">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.СканироватьДокумент</CommandName>
-						<ExtendedTooltip name="ФормаСканироватьДокументРасширеннаяПодсказка" id="51"/>
-					</Button>
-				</ChildItems>
-			</ButtonGroup>
-			<ButtonGroup name="Основные" id="11">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Основные</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Основные</v8:content>
-					</v8:item>
-				</ToolTip>
-				<CommandSource>Form</CommandSource>
-				<ExtendedTooltip name="ОсновныеExtendedTooltip" id="23"/>
-			</ButtonGroup>
-			<Button name="Скопировать" id="14">
+			<Button name="ЗагрузитьФайлы" id="8">
 				<Type>CommandBarButton</Type>
 				<SkipOnInput>false</SkipOnInput>
-				<CommandName>Form.StandardCommand.Copy</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="СкопироватьExtendedTooltip" id="24"/>
+				<CommandName>Form.Command.ЗагрузитьФайлы</CommandName>
+				<ExtendedTooltip name="ЗагрузитьФайлыExtendedTooltip" id="21"/>
 			</Button>
-			<Button name="ФормаПоделитьсяФайл" id="52">
+			<Button name="ФормаСканироватьДокумент" id="50">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ПоделитьсяФайл</CommandName>
-				<ExtendedTooltip name="ФормаПоделитьсяФайлРасширеннаяПодсказка" id="53"/>
+				<CommandName>Form.Command.СканироватьДокумент</CommandName>
+				<ExtendedTooltip name="ФормаСканироватьДокументРасширеннаяПодсказка" id="51"/>
 			</Button>
 			<Button name="Справка" id="13">
 				<Type>CommandBarButton</Type>
@@ -103,22 +50,21 @@
 			</ToolTip>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="32"/>
 		</UsualGroup>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
 			<SkipOnInput>false</SkipOnInput>
 			<DefaultItem>true</DefaultItem>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<RowSelectionMode>Cell</RowSelectionMode>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
-			<SearchStringLocation>None</SearchStringLocation>
 			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
+			<ShowCommandBar>auto</ShowCommandBar>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -135,7 +81,27 @@
 			<UserSettingsGroup>Настройки</UserSettingsGroup>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="СписокОбновить" id="62">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Refresh</CommandName>
+						<ExtendedTooltip name="СписокОбновитьРасширеннаяПодсказка" id="63"/>
+					</Button>
+					<Button name="ОткрытьФайл" id="9" DisplayImportance="VeryHigh">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьФайл</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ОткрытьФайлExtendedTooltip" id="22"/>
+					</Button>
+					<Button name="СкачатьАрхивом" id="48" DisplayImportance="High">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СкачатьАрхивом</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="СкачатьАрхивомРасширеннаяПодсказка" id="49"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="СписокExtendedTooltip" id="26"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="33">
 				<AdditionSource>
@@ -161,6 +127,7 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="40"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="41"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокПанельДействийВыделенныхСтрок" id="52"/>
 			<Events>
 				<Event name="DragCheck">СписокПроверкаПеретаскивания</Event>
 				<Event name="Drag">СписокПеретаскивание</Event>
@@ -177,6 +144,7 @@
 					</Title>
 					<ContextMenu name="СписокНаименованиеКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="СписокНаименованиеExtendedTooltip" id="27"/>
+					<SelectedItemsActionsPanel name="СписокНаименованиеПанельДействийВыделенныхСтрок" id="53"/>
 				</LabelField>
 				<LabelField name="СписокКод" id="6">
 					<DataPath>Список.Code</DataPath>
@@ -188,18 +156,21 @@
 					</Title>
 					<ContextMenu name="СписокКодКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="СписокКодExtendedTooltip" id="28"/>
+					<SelectedItemsActionsPanel name="СписокКодПанельДействийВыделенныхСтрок" id="54"/>
 				</LabelField>
 				<CheckBoxField name="СписокПодписан" id="17">
 					<DataPath>Список.Подписан</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="СписокПодписанКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="СписокПодписанExtendedTooltip" id="29"/>
+					<SelectedItemsActionsPanel name="СписокПодписанПанельДействийВыделенныхСтрок" id="55"/>
 				</CheckBoxField>
 				<CheckBoxField name="СписокЗашифрован" id="15">
 					<DataPath>Список.Зашифрован</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="СписокЗашифрованКонтекстноеМеню" id="16"/>
 					<ExtendedTooltip name="СписокЗашифрованExtendedTooltip" id="30"/>
+					<SelectedItemsActionsPanel name="СписокЗашифрованПанельДействийВыделенныхСтрок" id="56"/>
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
@@ -215,6 +186,7 @@
 			<ShowPercent>true</ShowPercent>
 			<ContextMenu name="ИндикаторПрогрессаКонтекстноеМеню" id="43"/>
 			<ExtendedTooltip name="ИндикаторПрогрессаРасширеннаяПодсказка" id="44"/>
+			<SelectedItemsActionsPanel name="ИндикаторПрогрессаПанельДействийВыделенныхСтрок" id="58"/>
 		</ProgressBarField>
 		<LabelField name="СообщениеОбОшибке" id="45">
 			<DataPath>СообщениеОбОшибке</DataPath>
@@ -223,6 +195,7 @@
 			<TextColor>style:SpecialTextColor</TextColor>
 			<ContextMenu name="СообщениеОбОшибкеКонтекстноеМеню" id="46"/>
 			<ExtendedTooltip name="СообщениеОбОшибкеРасширеннаяПодсказка" id="47"/>
+			<SelectedItemsActionsPanel name="СообщениеОбОшибкеПанельДействийВыделенныхСтрок" id="59"/>
 		</LabelField>
 	</ChildItems>
 	<Attributes>
@@ -233,7 +206,6 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>Список.Code</Field>
-				<Field>Список.Ref</Field>
 				<Field>Список.ИмяФайла</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
@@ -304,8 +276,13 @@
 					<v8:content>Загрузить файлы</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьФайл</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ЗагрузитьФайлы</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
 		</Command>
 		<Command name="ОткрытьФайл" id="2">
 			<Title>
@@ -320,7 +297,12 @@
 					<v8:content>Открыть файл</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ОткрытьФайл</Action>
+			<Representation>Picture</Representation>
 			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
 		</Command>
@@ -337,7 +319,15 @@
 					<v8:content>Скачать архивом</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СкачатьФайл</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СкачатьАрхивом</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+			<SelectedRowsUse>Use</SelectedRowsUse>
 		</Command>
 		<Command name="СканироватьДокумент" id="4">
 			<Title>
@@ -352,24 +342,12 @@
 					<v8:content>Сканировать документ</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СканироватьДокумент</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СканироватьДокумент</Action>
-		</Command>
-		<Command name="ПоделитьсяФайл" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Поделиться</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Поделиться</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПоделитьсяФайл</Action>
-			<CurrentRowUse>Use</CurrentRowUse>
-			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

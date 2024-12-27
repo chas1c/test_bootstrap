@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Журнал регистрации</v8:content>
 		</v8:item>
 	</Title>
+	<Width>140</Width>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
 	<AutoFillCheck>false</AutoFillCheck>
 	<CommandBarLocation>None</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -23,6 +26,7 @@
 		<ExcludedCommand>SaveValues</ExcludedCommand>
 		<ExcludedCommand>Yes</ExcludedCommand>
 	</CommandSet>
+	<ShowCommandBar>false</ShowCommandBar>
 	<AutoCommandBar name="Форма_КоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -31,87 +35,6 @@
 		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
 			<EnableContentChange>true</EnableContentChange>
 			<ExtendedTooltip name="ОсновнаяКоманднаяПанельExtendedTooltip" id="105"/>
-			<ChildItems>
-				<Button name="ПросмотрТекущегоСобытияВОтдельномОкне" id="38">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.ПросмотрТекущегоСобытияВОтдельномОкне</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ПросмотрТекущегоСобытияВОтдельномОкнеExtendedTooltip" id="106"/>
-				</Button>
-				<Button name="ОткрытьДанныеДляПросмотра" id="40">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.ОткрытьДанныеДляПросмотра</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ОткрытьДанныеДляПросмотраExtendedTooltip" id="107"/>
-				</Button>
-				<Button name="УстановитьИнтервалДатДляПросмотра" id="41">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.УстановитьИнтервалДатДляПросмотра</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="УстановитьИнтервалДатДляПросмотраExtendedTooltip" id="108"/>
-				</Button>
-				<Button name="УстановитьОтбор" id="42">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.УстановитьОтбор</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="УстановитьОтборExtendedTooltip" id="109"/>
-				</Button>
-				<Button name="ОтключитьОтбор" id="44">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.ОтключитьОтбор</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ОтключитьОтборExtendedTooltip" id="110"/>
-				</Button>
-				<Button name="СписокАктивныхПользователей" id="45">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.СписокАктивныхПользователей</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="СписокАктивныхПользователейExtendedTooltip" id="111"/>
-				</Button>
-				<Button name="ОбновитьТекущийСписок" id="46">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.ОбновитьТекущийСписок</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ОбновитьТекущийСписокExtendedTooltip" id="112"/>
-				</Button>
-				<Button name="ВывестиСписок" id="82">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Item.Журнал.StandardCommand.OutputList</CommandName>
-					<TextColor>style:ButtonTextColor</TextColor>
-					<BackColor>style:ButtonBackColor</BackColor>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ExtendedTooltip name="ВывестиСписокExtendedTooltip" id="113"/>
-				</Button>
-				<Button name="ИзменитьФорму1" id="104">
-					<Type>CommandBarButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
-					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-					<ExtendedTooltip name="ИзменитьФорму1ExtendedTooltip" id="114"/>
-				</Button>
-			</ChildItems>
 		</CommandBar>
 		<UsualGroup name="ГруппаОтбора" id="103">
 			<Title>
@@ -147,7 +70,8 @@
 							<v8:content>Количество отбираемых с учетом установленного отбора последних в хронологическом порядке событий</v8:content>
 						</v8:item>
 					</ToolTip>
-					<HorizontalAlign>Right</HorizontalAlign>
+					<Width>20</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Wrap>false</Wrap>
 					<DropListButton>true</DropListButton>
 					<EditFormat>
@@ -214,13 +138,27 @@
 						</xr:Item>
 					</ChoiceList>
 					<ChoiceListButton>true</ChoiceListButton>
-					<BorderColor>style:BorderColor</BorderColor>
 					<ContextMenu name="КоличествоПоказываемыхСобытий_КонтекстноеМеню" id="102"/>
 					<ExtendedTooltip name="КоличествоПоказываемыхСобытийExtendedTooltip" id="116"/>
+					<SelectedItemsActionsPanel name="КоличествоПоказываемыхСобытийПанельДействийВыделенныхСтрок" id="155"/>
 					<Events>
 						<Event name="OnChange">КоличествоПоказываемыхСобытийПриИзменении</Event>
 					</Events>
 				</InputField>
+				<Button name="Фильтр" id="206">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.УстановитьОтбор</CommandName>
+					<TextColor>style:ButtonTextColor</TextColor>
+					<BorderColor>style:BorderColor</BorderColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фильтр</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФильтрРасширеннаяПодсказка" id="207"/>
+				</Button>
 				<LabelField name="ПредставлениеОтбора" id="35">
 					<DataPath>ПредставлениеОтбора</DataPath>
 					<Title>
@@ -229,34 +167,34 @@
 							<v8:content>Отбор</v8:content>
 						</v8:item>
 					</Title>
+					<TitleLocation>None</TitleLocation>
 					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 					<Width>60</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<ContextMenu name="ПредставлениеОтбора_КонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="ПредставлениеОтбораExtendedTooltip" id="117"/>
+					<SelectedItemsActionsPanel name="ПредставлениеОтбораПанельДействийВыделенныхСтрок" id="156"/>
 				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="Журнал" id="48">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
+			<CommandBarLocation>Top</CommandBarLocation>
 			<ReadOnly>true</ReadOnly>
 			<SkipOnInput>false</SkipOnInput>
 			<DefaultItem>true</DefaultItem>
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
-			<Width>90</Width>
-			<HeightInTableRows>15</HeightInTableRows>
+			<HeightInTableRows>20</HeightInTableRows>
+			<AutoMaxRowsCount>false</AutoMaxRowsCount>
 			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
 			<InitialListView>End</InitialListView>
+			<RowActionsShowType>ShowOnHover</RowActionsShowType>
 			<Output>Enable</Output>
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Журнал</DataPath>
-			<RowPictureDataPath>Журнал.НомерРисунка</RowPictureDataPath>
-			<RowsPicture>
-				<xr:Ref>CommonPicture.КоллекцияВидыСобытийЖурналаРегистрации</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-				<xr:TransparentPixel x="30" y="2"/>
-			</RowsPicture>
 			<BorderColor>style:BorderColor</BorderColor>
 			<Title>
 				<v8:item>
@@ -276,41 +214,92 @@
 			<SearchStringLocation>None</SearchStringLocation>
 			<ViewStatusLocation>None</ViewStatusLocation>
 			<SearchControlLocation>None</SearchControlLocation>
+			<ShowCommandBar>true</ShowCommandBar>
 			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="Журнал_КонтекстноеМеню" id="49">
+			<ContextMenu name="Журнал_КонтекстноеМеню" id="49"/>
+			<AutoCommandBar name="Журнал_КоманднаяПанель" id="50">
 				<ChildItems>
-					<Button name="ПросмотрТекущегоСобытияВОтдельномОкне2" id="96">
+					<Button name="ПросмотрТекущегоСобытияВОтдельномОкне" id="38">
 						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
 						<SkipOnInput>false</SkipOnInput>
 						<CommandName>Form.Command.ПросмотрТекущегоСобытияВОтдельномОкне</CommandName>
 						<TextColor>style:ButtonTextColor</TextColor>
-						<BackColor>style:ButtonBackColor</BackColor>
 						<BorderColor>style:BorderColor</BorderColor>
-						<ExtendedTooltip name="ПросмотрТекущегоСобытияВОтдельномОкне2ExtendedTooltip" id="118"/>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ПросмотрТекущегоСобытияВОтдельномОкнеРасширеннаяПодсказка" id="106"/>
 					</Button>
-					<Button name="ОткрытьДанныеДляПросмотра1" id="97">
+					<Button name="ОткрытьДанныеДляПросмотра" id="40">
 						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
 						<SkipOnInput>false</SkipOnInput>
 						<CommandName>Form.Command.ОткрытьДанныеДляПросмотра</CommandName>
 						<TextColor>style:ButtonTextColor</TextColor>
-						<BackColor>style:ButtonBackColor</BackColor>
 						<BorderColor>style:BorderColor</BorderColor>
-						<ExtendedTooltip name="ОткрытьДанныеДляПросмотра1ExtendedTooltip" id="119"/>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="ОткрытьДанныеДляПросмотраExtendedTooltip" id="107"/>
 					</Button>
-					<Button name="ИзменитьФорму" id="95">
+					<Button name="ОбновитьТекущийСписок" id="46">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.ОбновитьТекущийСписок</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<ExtendedTooltip name="ОбновитьТекущийСписокExtendedTooltip" id="112"/>
+					</Button>
+					<ButtonGroup name="ЖурналГруппа1" id="213">
+						<ExtendedTooltip name="ЖурналГруппа1РасширеннаяПодсказка" id="214"/>
+						<ChildItems>
+							<Button name="ЖурналНайти" id="215">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Журнал.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="ЖурналНайтиРасширеннаяПодсказка" id="216"/>
+							</Button>
+							<Button name="ЖурналОтменитьПоиск" id="217">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Журнал.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="ЖурналОтменитьПоискРасширеннаяПодсказка" id="218"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="УстановитьИнтервалДатДляПросмотра" id="41">
 						<Type>CommandBarButton</Type>
 						<SkipOnInput>false</SkipOnInput>
-						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<CommandName>Form.Command.УстановитьИнтервалДатДляПросмотра</CommandName>
 						<TextColor>style:ButtonTextColor</TextColor>
-						<BackColor>style:ButtonBackColor</BackColor>
 						<BorderColor>style:BorderColor</BorderColor>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-						<ExtendedTooltip name="ИзменитьФормуExtendedTooltip" id="120"/>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="УстановитьИнтервалДатДляПросмотраExtendedTooltip" id="108"/>
+					</Button>
+					<Button name="УстановитьОтбор" id="42">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.УстановитьОтбор</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="УстановитьОтборExtendedTooltip" id="109"/>
+					</Button>
+					<Button name="ОтключитьОтбор" id="44">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.ОтключитьОтбор</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ОтключитьОтборExtendedTooltip" id="110"/>
+					</Button>
+					<Button name="СписокАктивныхПользователей" id="45">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.СписокАктивныхПользователей</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокАктивныхПользователейExtendedTooltip" id="111"/>
 					</Button>
 				</ChildItems>
-			</ContextMenu>
-			<AutoCommandBar name="Журнал_КоманднаяПанель" id="50">
-				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ЖурналExtendedTooltip" id="121"/>
 			<SearchStringAddition name="ЖурналСтрокаПоиска" id="146">
@@ -337,23 +326,39 @@
 				<ContextMenu name="ЖурналУправлениеПоискомКонтекстноеМеню" id="153"/>
 				<ExtendedTooltip name="ЖурналУправлениеПоискомРасширеннаяПодсказка" id="154"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ЖурналПанельДействийВыделенныхСтрок" id="157"/>
 			<Events>
 				<Event name="Selection">ЖурналВыбор</Event>
 			</Events>
 			<ChildItems>
-				<InputField name="Дата" id="51">
-					<DataPath>Журнал.Дата</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дата, время</v8:content>
-						</v8:item>
-					</Title>
-					<Wrap>false</Wrap>
-					<BorderColor>style:BorderColor</BorderColor>
-					<ContextMenu name="Дата_КонтекстноеМеню" id="52"/>
-					<ExtendedTooltip name="ДатаExtendedTooltip" id="122"/>
-				</InputField>
+				<ColumnGroup name="ГруппаКартинкаИДата" id="193">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаКартинкаИДатаРасширеннаяПодсказка" id="194"/>
+					<ChildItems>
+						<PictureField name="Картинка" id="195">
+							<DataPath>Журнал.Картинка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="КартинкаКонтекстноеМеню" id="196"/>
+							<ExtendedTooltip name="КартинкаРасширеннаяПодсказка" id="197"/>
+							<SelectedItemsActionsPanel name="КартинкаПанельДействийВыделенныхСтрок" id="198"/>
+						</PictureField>
+						<InputField name="Дата" id="51">
+							<DataPath>Журнал.Дата</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата, время</v8:content>
+								</v8:item>
+							</Title>
+							<Wrap>false</Wrap>
+							<ContextMenu name="Дата_КонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ДатаExtendedTooltip" id="122"/>
+							<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="158"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 				<ColumnGroup name="ГруппаПользовательКомпьютерПриложение" id="53">
 					<ExtendedTooltip name="ГруппаПользовательКомпьютерПриложениеExtendedTooltip" id="123"/>
 					<ChildItems>
@@ -366,9 +371,9 @@
 								</v8:item>
 							</Title>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="ИмяПользователя_КонтекстноеМеню" id="55"/>
 							<ExtendedTooltip name="ИмяПользователяExtendedTooltip" id="124"/>
+							<SelectedItemsActionsPanel name="ИмяПользователяПанельДействийВыделенныхСтрок" id="159"/>
 						</InputField>
 						<InputField name="Компьютер" id="56">
 							<DataPath>Журнал.Компьютер</DataPath>
@@ -379,9 +384,9 @@
 								</v8:item>
 							</Title>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="Компьютер_КонтекстноеМеню" id="57"/>
 							<ExtendedTooltip name="КомпьютерExtendedTooltip" id="125"/>
+							<SelectedItemsActionsPanel name="КомпьютерПанельДействийВыделенныхСтрок" id="160"/>
 						</InputField>
 						<ColumnGroup name="ГруппаПриложение" id="58">
 							<Group>Horizontal</Group>
@@ -396,16 +401,16 @@
 										</v8:item>
 									</Title>
 									<Wrap>false</Wrap>
-									<BorderColor>style:BorderColor</BorderColor>
 									<ContextMenu name="ПредставлениеПриложения_КонтекстноеМеню" id="60"/>
 									<ExtendedTooltip name="ПредставлениеПриложенияExtendedTooltip" id="127"/>
+									<SelectedItemsActionsPanel name="ПредставлениеПриложенияПанельДействийВыделенныхСтрок" id="161"/>
 								</InputField>
 								<InputField name="Сеанс" id="80">
 									<DataPath>Журнал.Сеанс</DataPath>
 									<Wrap>false</Wrap>
-									<BorderColor>style:BorderColor</BorderColor>
 									<ContextMenu name="Сеанс_КонтекстноеМеню" id="81"/>
 									<ExtendedTooltip name="СеансExtendedTooltip" id="128"/>
+									<SelectedItemsActionsPanel name="СеансПанельДействийВыделенныхСтрок" id="162"/>
 								</InputField>
 							</ChildItems>
 						</ColumnGroup>
@@ -423,9 +428,9 @@
 								</v8:item>
 							</Title>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="ПредставлениеСобытия_КонтекстноеМеню" id="65"/>
 							<ExtendedTooltip name="ПредставлениеСобытияExtendedTooltip" id="130"/>
+							<SelectedItemsActionsPanel name="ПредставлениеСобытияПанельДействийВыделенныхСтрок" id="163"/>
 						</InputField>
 						<InputField name="Комментарий" id="66">
 							<DataPath>Журнал.Комментарий</DataPath>
@@ -436,9 +441,9 @@
 								</v8:item>
 							</Title>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="Комментарий_КонтекстноеМеню" id="67"/>
 							<ExtendedTooltip name="КомментарийExtendedTooltip" id="131"/>
+							<SelectedItemsActionsPanel name="КомментарийПанельДействийВыделенныхСтрок" id="164"/>
 						</InputField>
 					</ChildItems>
 				</ColumnGroup>
@@ -454,16 +459,16 @@
 								</v8:item>
 							</Title>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="СтатусТранзакции_КонтекстноеМеню" id="70"/>
 							<ExtendedTooltip name="СтатусТранзакцииExtendedTooltip" id="133"/>
+							<SelectedItemsActionsPanel name="СтатусТранзакцииПанельДействийВыделенныхСтрок" id="165"/>
 						</InputField>
 						<InputField name="Транзакция" id="71">
 							<DataPath>Журнал.Транзакция</DataPath>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="Транзакция_КонтекстноеМеню" id="72"/>
 							<ExtendedTooltip name="ТранзакцияExtendedTooltip" id="134"/>
+							<SelectedItemsActionsPanel name="ТранзакцияПанельДействийВыделенныхСтрок" id="166"/>
 						</InputField>
 					</ChildItems>
 				</ColumnGroup>
@@ -473,21 +478,22 @@
 						<InputField name="Метаданные" id="74">
 							<DataPath>Журнал.ПредставлениеМетаданных</DataPath>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="Метаданные_КонтекстноеМеню" id="75"/>
 							<ExtendedTooltip name="МетаданныеExtendedTooltip" id="136"/>
+							<SelectedItemsActionsPanel name="МетаданныеПанельДействийВыделенныхСтрок" id="167"/>
 						</InputField>
 						<InputField name="Данные" id="76">
 							<DataPath>Журнал.Данные</DataPath>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="Данные_КонтекстноеМеню" id="77"/>
 							<ExtendedTooltip name="ДанныеExtendedTooltip" id="137"/>
+							<SelectedItemsActionsPanel name="ДанныеПанельДействийВыделенныхСтрок" id="168"/>
 						</InputField>
 						<LabelField name="ПредставлениеДанных" id="78">
 							<DataPath>Журнал.ПредставлениеДанных</DataPath>
 							<ContextMenu name="ПредставлениеДанных_КонтекстноеМеню" id="79"/>
 							<ExtendedTooltip name="ПредставлениеДанныхExtendedTooltip" id="138"/>
+							<SelectedItemsActionsPanel name="ПредставлениеДанныхПанельДействийВыделенныхСтрок" id="169"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>
@@ -528,16 +534,16 @@
 								<InputField name="РабочийСервер" id="85">
 									<DataPath>Журнал.РабочийСервер</DataPath>
 									<Wrap>false</Wrap>
-									<BorderColor>style:BorderColor</BorderColor>
 									<ContextMenu name="РабочийСервер_КонтекстноеМеню" id="86"/>
 									<ExtendedTooltip name="РабочийСерверExtendedTooltip" id="141"/>
+									<SelectedItemsActionsPanel name="РабочийСерверПанельДействийВыделенныхСтрок" id="170"/>
 								</InputField>
 								<InputField name="Соединение" id="87">
 									<DataPath>Журнал.Соединение</DataPath>
 									<Wrap>false</Wrap>
-									<BorderColor>style:BorderColor</BorderColor>
 									<ContextMenu name="Соединение_КонтекстноеМеню" id="88"/>
 									<ExtendedTooltip name="СоединениеExtendedTooltip" id="142"/>
+									<SelectedItemsActionsPanel name="СоединениеПанельДействийВыделенныхСтрок" id="171"/>
 								</InputField>
 							</ChildItems>
 						</ColumnGroup>
@@ -560,16 +566,16 @@
 								<InputField name="ОсновнойIPПорт" id="89">
 									<DataPath>Журнал.ОсновнойIPПорт</DataPath>
 									<Wrap>false</Wrap>
-									<BorderColor>style:BorderColor</BorderColor>
 									<ContextMenu name="ОсновнойIPПорт_КонтекстноеМеню" id="90"/>
 									<ExtendedTooltip name="ОсновнойIPПортExtendedTooltip" id="144"/>
+									<SelectedItemsActionsPanel name="ОсновнойIPПортПанельДействийВыделенныхСтрок" id="172"/>
 								</InputField>
 								<InputField name="ВспомогательныйIPПорт" id="91">
 									<DataPath>Журнал.ВспомогательныйIPПорт</DataPath>
 									<Wrap>false</Wrap>
-									<BorderColor>style:BorderColor</BorderColor>
 									<ContextMenu name="ВспомогательныйIPПорт_КонтекстноеМеню" id="92"/>
 									<ExtendedTooltip name="ВспомогательныйIPПортExtendedTooltip" id="145"/>
+									<SelectedItemsActionsPanel name="ВспомогательныйIPПортПанельДействийВыделенныхСтрок" id="173"/>
 								</InputField>
 							</ChildItems>
 						</ColumnGroup>
@@ -925,20 +931,9 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="НомерРисунка" id="22">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Номер рисунка</v8:content>
-						</v8:item>
-					</Title>
+				<Column name="Картинка" id="22">
 					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>1</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
+						<v8:Type>v8ui:Picture</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -1047,13 +1042,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить отбор</v8:content>
+					<v8:content>Фильтр</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить отбор</v8:content>
+					<v8:content>Установить фильтр</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -1066,13 +1061,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отключить отбор</v8:content>
+					<v8:content>Отключить фильтр</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отключить отбор</v8:content>
+					<v8:content>Отключить фильтр</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -1104,7 +1099,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить текущий список</v8:content>
+					<v8:content>Обновить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>AutomaticallyScreenTypeSensitive</Group>
+	<HorizontalSpacing>Double</HorizontalSpacing>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -10,7 +15,6 @@
 				<SkipOnInput>false</SkipOnInput>
 				<CommandName>Report.ОстаткиТоваровНаСкладах.Command.ОстаткиПоСкладу</CommandName>
 				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
 				<BorderColor>style:BorderColor</BorderColor>
 				<ExtendedTooltip name="ОстаткиПоСкладуExtendedTooltip" id="50"/>
 			</Button>
@@ -37,6 +41,7 @@
 			<Button name="ФормаКопироваВБуферОбмена" id="120">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.КопироватьВБуферОбмена</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаКопироваВБуферОбменаРасширеннаяПодсказка" id="121"/>
 			</Button>
 		</ChildItems>
@@ -51,221 +56,137 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Шапка" id="40">
+		<UsualGroup name="ЛеваяКолонка" id="99">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка</v8:content>
+					<v8:content>Левая колонка</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка</v8:content>
+					<v8:content>Левая колонка</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Horizontal</Group>
+			<Width>30</Width>
+			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="53"/>
+			<ScrollOnCompress>true</ScrollOnCompress>
+			<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="100"/>
 			<ChildItems>
-				<UsualGroup name="ЛеваяКолонка" id="99">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Левая колонка</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Левая колонка</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="100"/>
-					<ChildItems>
-						<InputField name="Номер" id="2">
-							<DataPath>Объект.Number</DataPath>
-							<SkipOnInput>true</SkipOnInput>
-							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-							<HorizontalStretch>false</HorizontalStretch>
-							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
-							<ContextMenu name="НомерКонтекстноеМеню" id="24"/>
-							<ExtendedTooltip name="НомерExtendedTooltip" id="54"/>
-						</InputField>
-						<InputField name="Дата" id="3">
-							<DataPath>Объект.Date</DataPath>
-							<DefaultItem>true</DefaultItem>
-							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-							<Wrap>false</Wrap>
-							<ContextMenu name="ДатаКонтекстноеМеню" id="23"/>
-							<ExtendedTooltip name="ДатаExtendedTooltip" id="55"/>
-						</InputField>
-						<InputField name="Организация" id="37">
-							<DataPath>Объект.Организация</DataPath>
-							<Width>30</Width>
-							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
-							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="38"/>
-							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="56"/>
-							<Events>
-								<Event name="OnChange">ОрганизацияПриИзменении</Event>
-							</Events>
-						</InputField>
-						<UsualGroup name="ГруппаПокупатель" id="48">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа покупатель</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа покупатель</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПокупательExtendedTooltip" id="57"/>
-							<ChildItems>
-								<InputField name="Покупатель" id="4">
-									<DataPath>Объект.Покупатель</DataPath>
-									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Wrap>false</Wrap>
-									<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
-									<BorderColor>style:BorderColor</BorderColor>
-									<ContextMenu name="ПокупательКонтекстноеМеню" id="25"/>
-									<ExtendedTooltip name="ПокупательExtendedTooltip" id="58"/>
-									<Events>
-										<Event name="OnChange">ПокупательПриИзменении</Event>
-									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<InputField name="Склад" id="5">
-							<DataPath>Объект.Склад</DataPath>
-							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-							<Wrap>false</Wrap>
-							<ContextMenu name="СкладКонтекстноеМеню" id="28"/>
-							<ExtendedTooltip name="СкладExtendedTooltip" id="60"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ПраваяКолонка" id="101">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Правая колонка</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Правая колонка</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="102"/>
-					<ChildItems>
-						<InputField name="ВидЦен" id="7">
-							<DataPath>Объект.ВидЦен</DataPath>
-							<SkipOnInput>true</SkipOnInput>
-							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-							<Wrap>false</Wrap>
-							<ContextMenu name="ВидЦенКонтекстноеМеню" id="26"/>
-							<ExtendedTooltip name="ВидЦенExtendedTooltip" id="62"/>
-							<Events>
-								<Event name="OnChange">ВидЦенПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Валюта" id="6">
-							<DataPath>Объект.Валюта</DataPath>
-							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-							<Wrap>false</Wrap>
-							<ContextMenu name="ВалютаКонтекстноеМеню" id="27"/>
-							<ExtendedTooltip name="ВалютаExtendedTooltip" id="63"/>
-						</InputField>
-						<RadioButtonField name="СостояниеЗаказа" id="90">
-							<DataPath>Объект.СостояниеЗаказа</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<RadioButtonType>Tumbler</RadioButtonType>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияЗаказов.EnumValue.Открыт</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>В работе</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияЗаказов.EnumValue.ВРаботе</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияЗаказов.EnumValue.Выполнен</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation/>
-										<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияЗаказов.EnumValue.Закрыт</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<ContextMenu name="СостояниеЗаказаКонтекстноеМеню" id="91"/>
-							<ExtendedTooltip name="СостояниеЗаказаExtendedTooltip" id="92"/>
-						</RadioButtonField>
-					</ChildItems>
-				</UsualGroup>
+				<InputField name="Номер" id="2">
+					<DataPath>Объект.Number</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НомерКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="54"/>
+					<SelectedItemsActionsPanel name="НомерПанельДействийВыделенныхСтрок" id="122"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="55"/>
+					<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="123"/>
+				</InputField>
+				<InputField name="Организация" id="37">
+					<DataPath>Объект.Организация</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="56"/>
+					<SelectedItemsActionsPanel name="ОрганизацияПанельДействийВыделенныхСтрок" id="124"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Покупатель" id="4">
+					<DataPath>Объект.Покупатель</DataPath>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Wrap>false</Wrap>
+					<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+					<ContextMenu name="ПокупательКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПокупательExtendedTooltip" id="58"/>
+					<SelectedItemsActionsPanel name="ПокупательПанельДействийВыделенныхСтрок" id="125"/>
+					<Events>
+						<Event name="OnChange">ПокупательПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидЦен" id="7">
+					<DataPath>Объект.ВидЦен</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ВидЦенКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВидЦенExtendedTooltip" id="62"/>
+					<SelectedItemsActionsPanel name="ВидЦенПанельДействийВыделенныхСтрок" id="127"/>
+					<Events>
+						<Event name="OnChange">ВидЦенПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Валюта" id="6">
+					<DataPath>Объект.Валюта</DataPath>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ВалютаExtendedTooltip" id="63"/>
+					<SelectedItemsActionsPanel name="ВалютаПанельДействийВыделенныхСтрок" id="128"/>
+				</InputField>
+				<InputField name="Склад" id="5">
+					<DataPath>Объект.Склад</DataPath>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<Wrap>false</Wrap>
+					<ContextMenu name="СкладКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="СкладExtendedTooltip" id="60"/>
+					<SelectedItemsActionsPanel name="СкладПанельДействийВыделенныхСтрок" id="126"/>
+				</InputField>
+				<InputField name="СостояниеЗаказа" id="90">
+					<DataPath>Объект.СостояниеЗаказа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<WidthInCard>Full</WidthInCard>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СостояниеЗаказаКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="СостояниеЗаказаExtendedTooltip" id="92"/>
+					<SelectedItemsActionsPanel name="СостояниеЗаказаПанельДействийВыделенныхСтрок" id="129"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаТовары" id="8">
+		<UsualGroup name="ПраваяКолонка" id="101">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Товары</v8:content>
+					<v8:content>Правая колонка</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правая колонка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>70</Width>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
-			<ExtendedTooltip name="ГруппаТоварыExtendedTooltip" id="65"/>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="102"/>
 			<ChildItems>
 				<Table name="Товары" id="9">
 					<Representation>List</Representation>
 					<SkipOnInput>false</SkipOnInput>
 					<Width>40</Width>
 					<HeightInTableRows>8</HeightInTableRows>
-					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<RowSelectionMode>Cell</RowSelectionMode>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<MarkRequiredComplete>true</MarkRequiredComplete>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<FileDragMode>AsFile</FileDragMode>
@@ -280,7 +201,6 @@
 								<SkipOnInput>false</SkipOnInput>
 								<CommandName>Form.Command.КомандаПодбор</CommandName>
 								<TextColor>style:ButtonTextColor</TextColor>
-								<BackColor>style:ButtonBackColor</BackColor>
 								<BorderColor>style:BorderColor</BorderColor>
 								<ExtendedTooltip name="КомандаПодборExtendedTooltip" id="66"/>
 							</Button>
@@ -311,12 +231,15 @@
 						<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="110"/>
 						<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="111"/>
 					</SearchControlAddition>
+					<SelectedItemsActionsPanel name="ТоварыПанельДействийВыделенныхСтрок" id="130"/>
 					<ChildItems>
 						<InputField name="ТоварыТовар" id="76" DisplayImportance="High">
 							<DataPath>Объект.Товары.Товар</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ТоварыТоварКонтекстноеМеню" id="77"/>
 							<ExtendedTooltip name="ТоварыТоварРасширеннаяПодсказка" id="78"/>
+							<SelectedItemsActionsPanel name="ТоварыТоварПанельДействийВыделенныхСтрок" id="131"/>
 							<Events>
 								<Event name="OnChange">ТоварыТоварПриИзменении</Event>
 							</Events>
@@ -324,8 +247,10 @@
 						<InputField name="ТоварыЦена" id="79" DisplayImportance="Usual">
 							<DataPath>Объект.Товары.Цена</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="80"/>
 							<ExtendedTooltip name="ТоварыЦенаРасширеннаяПодсказка" id="81"/>
+							<SelectedItemsActionsPanel name="ТоварыЦенаПанельДействийВыделенныхСтрок" id="132"/>
 							<Events>
 								<Event name="OnChange">ТоварыЦенаПриИзменении</Event>
 							</Events>
@@ -333,9 +258,11 @@
 						<InputField name="ТоварыКоличество" id="82" DisplayImportance="Usual">
 							<DataPath>Объект.Товары.Количество</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<SpinButton>true</SpinButton>
 							<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="83"/>
 							<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="84"/>
+							<SelectedItemsActionsPanel name="ТоварыКоличествоПанельДействийВыделенныхСтрок" id="133"/>
 							<Events>
 								<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
 							</Events>
@@ -343,50 +270,65 @@
 						<InputField name="ТоварыСумма" id="85" DisplayImportance="High">
 							<DataPath>Объект.Товары.Сумма</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="86"/>
 							<ExtendedTooltip name="ТоварыСуммаРасширеннаяПодсказка" id="87"/>
+							<SelectedItemsActionsPanel name="ТоварыСуммаПанельДействийВыделенныхСтрок" id="134"/>
 							<Events>
 								<Event name="OnChange">ТоварыСуммаПриИзменении</Event>
 							</Events>
 						</InputField>
 					</ChildItems>
 				</Table>
-				<UsualGroup name="Итоги" id="42">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Итоги</v8:content>
-						</v8:item>
-					</Title>
+				<UsualGroup name="АвторИИтоги" id="42">
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 					<Group>Horizontal</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ИтогиExtendedTooltip" id="73"/>
+					<ExtendedTooltip name="АвторИИтогиРасширеннаяПодсказка" id="73"/>
 					<ChildItems>
-						<LabelField name="ТоварыИтогКоличество" id="43">
-							<DataPath>Объект.Товары.TotalКоличество</DataPath>
-							<HorizontalAlign>Left</HorizontalAlign>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="ТоварыИтогКоличествоКонтекстноеМеню" id="44"/>
-							<ExtendedTooltip name="ТоварыИтогКоличествоExtendedTooltip" id="74"/>
+						<LabelField name="Автор" id="96">
+							<DataPath>Объект.Автор</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="АвторКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="98"/>
+							<SelectedItemsActionsPanel name="АвторПанельДействийВыделенныхСтрок" id="139"/>
 						</LabelField>
-						<LabelField name="ТоварыИтогСумма" id="45">
-							<DataPath>Объект.Товары.TotalСумма</DataPath>
-							<HorizontalAlign>Left</HorizontalAlign>
-							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-							<ContextMenu name="ТоварыИтогСуммаКонтекстноеМеню" id="46"/>
-							<ExtendedTooltip name="ТоварыИтогСуммаExtendedTooltip" id="75"/>
-						</LabelField>
+						<UsualGroup name="Итоги" id="161">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИтогиРасширеннаяПодсказка" id="162"/>
+							<ChildItems>
+								<LabelField name="ТоварыИтогКоличество" id="43">
+									<DataPath>Объект.Товары.TotalКоличество</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Width>12</Width>
+									<ContextMenu name="ТоварыИтогКоличествоКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ТоварыИтогКоличествоExtendedTooltip" id="74"/>
+									<SelectedItemsActionsPanel name="ТоварыИтогКоличествоПанельДействийВыделенныхСтрок" id="137"/>
+								</LabelField>
+								<LabelField name="ТоварыИтогСумма" id="45">
+									<DataPath>Объект.Товары.TotalСумма</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Width>12</Width>
+									<Font ref="style:TitleLevel2" kind="StyleItem"/>
+									<ContextMenu name="ТоварыИтогСуммаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ТоварыИтогСуммаExtendedTooltip" id="75"/>
+									<SelectedItemsActionsPanel name="ТоварыИтогСуммаПанельДействийВыделенныхСтрок" id="138"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<LabelField name="Автор" id="96">
-			<DataPath>Объект.Автор</DataPath>
-			<ContextMenu name="АвторКонтекстноеМеню" id="97"/>
-			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="98"/>
-		</LabelField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -459,9 +401,10 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FF8C00</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаСущественныхИзмененийДанных</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>Шрифт</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					</dcscor:item>
@@ -531,10 +474,11 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.ОтправитьСМС</xr:Ref>
+				<xr:Ref>CommonPicture.СМС</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОтправитьСМС</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Позвонить" id="3">
@@ -551,10 +495,11 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.Позвонить</xr:Ref>
+				<xr:Ref>StdPicture.StartVideoconference</xr:Ref>
 				<xr:LoadTransparent>false</xr:LoadTransparent>
 			</Picture>
 			<Action>Позвонить</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КопироватьВБуферОбмена" id="4">

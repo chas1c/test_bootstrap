@@ -1,17 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Настройка бота</v8:content>
 		</v8:item>
 	</Title>
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
-	<CommandBarLocation>None</CommandBarLocation>
+	<Group>Vertical</Group>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="13">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить</v8:content>
+					</v8:item>
+				</Title>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="14"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
@@ -45,17 +60,11 @@
 					<MinValue xsi:type="xs:decimal">1</MinValue>
 					<ContextMenu name="КоличествоДнейКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="КоличествоДнейРасширеннаяПодсказка" id="3"/>
+					<SelectedItemsActionsPanel name="КоличествоДнейПанельДействийВыделенныхСтрок" id="27"/>
 					<Events>
 						<Event name="OnChange">КоличествоДнейПриИзменении</Event>
 					</Events>
 				</InputField>
-				<LabelField name="КоличествоДнейСтрока" id="15">
-					<DataPath>КоличествоДнейСтрока</DataPath>
-					<Enabled>false</Enabled>
-					<TitleLocation>None</TitleLocation>
-					<ContextMenu name="КоличествоДнейСтрокаКонтекстноеМеню" id="16"/>
-					<ExtendedTooltip name="КоличествоДнейСтрокаРасширеннаяПодсказка" id="17"/>
-				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаИнтервалПроверки" id="20">
@@ -89,55 +98,11 @@
 					<MinValue xsi:type="xs:decimal">1</MinValue>
 					<ContextMenu name="ИнтервалПроверкиИнтервалПроверкиЗаказовКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ИнтервалПроверкиИнтервалПроверкиЗаказовРасширеннаяПодсказка" id="12"/>
+					<SelectedItemsActionsPanel name="ИнтервалПроверкиИнтервалПроверкиЗаказовПанельДействийВыделенныхСтрок" id="29"/>
 					<Events>
 						<Event name="OnChange">ИнтервалПроверкиИнтервалПроверкиЗаказовПриИзменении</Event>
 					</Events>
 				</InputField>
-				<LabelField name="ИнтервалПроверкиСтрока" id="22">
-					<DataPath>ИнтервалПроверкиСтрока</DataPath>
-					<Enabled>false</Enabled>
-					<TitleLocation>None</TitleLocation>
-					<ContextMenu name="ИнтервалПроверкиСтрокаКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="ИнтервалПроверкиСтрокаРасширеннаяПодсказка" id="24"/>
-				</LabelField>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаКоманд" id="25">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа команд</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа команд</v8:content>
-				</v8:item>
-			</ToolTip>
-			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-			<Behavior>Usual</Behavior>
-			<Representation>NormalSeparation</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаКомандРасширеннаяПодсказка" id="26"/>
-			<ChildItems>
-				<Button name="ФормаЗаписатьИЗакрыть" id="13">
-					<Type>UsualButton</Type>
-					<DefaultButton>true</DefaultButton>
-					<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ОК</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="14"/>
-				</Button>
-				<Button name="ФормаОтмена" id="6">
-					<Type>UsualButton</Type>
-					<CommandName>Form.StandardCommand.Cancel</CommandName>
-					<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="7"/>
-				</Button>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

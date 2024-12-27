@@ -1,45 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="Обновить" id="4">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<SkipOnInput>false</SkipOnInput>
-				<CommandName>Form.Command.Обновить</CommandName>
-				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
-				<BorderColor>style:BorderColor</BorderColor>
-				<ExtendedTooltip name="ОбновитьExtendedTooltip" id="16"/>
-			</Button>
-			<Button name="Справка" id="5">
-				<Type>CommandBarButton</Type>
-				<SkipOnInput>false</SkipOnInput>
-				<CommandName>Form.StandardCommand.Help</CommandName>
-				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
-				<BorderColor>style:BorderColor</BorderColor>
-				<ExtendedTooltip name="СправкаExtendedTooltip" id="17"/>
-			</Button>
-			<Button name="Настроить" id="9">
-				<Type>CommandBarButton</Type>
-				<SkipOnInput>false</SkipOnInput>
-				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
-				<TextColor>style:ButtonTextColor</TextColor>
-				<BackColor>style:ButtonBackColor</BackColor>
-				<BorderColor>style:BorderColor</BorderColor>
-				<ExtendedTooltip name="НастроитьExtendedTooltip" id="18"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<Table name="ТаблицаОстатков" id="6">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
 			<ReadOnly>true</ReadOnly>
 			<SkipOnInput>false</SkipOnInput>
 			<ChangeRowSet>false</ChangeRowSet>
@@ -47,16 +17,28 @@
 			<Width>40</Width>
 			<HeightInTableRows>4</HeightInTableRows>
 			<SelectionMode>SingleRow</SelectionMode>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<RowSelectionMode>Cell</RowSelectionMode>
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>ТаблицаОстатков</DataPath>
 			<BorderColor>style:BorderColor</BorderColor>
 			<SearchStringLocation>None</SearchStringLocation>
 			<ViewStatusLocation>None</ViewStatusLocation>
 			<SearchControlLocation>None</SearchControlLocation>
+			<ShowCommandBar>auto</ShowCommandBar>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТаблицаОстатковКонтекстноеМеню" id="10"/>
-			<AutoCommandBar name="ТаблицаОстатковКоманднаяПанель" id="11"/>
+			<AutoCommandBar name="ТаблицаОстатковКоманднаяПанель" id="11">
+				<ChildItems>
+					<Button name="Обновить" id="4">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.Обновить</CommandName>
+						<TextColor>style:ButtonTextColor</TextColor>
+						<BorderColor>style:BorderColor</BorderColor>
+						<ExtendedTooltip name="ОбновитьExtendedTooltip" id="16"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ТаблицаОстатковExtendedTooltip" id="19"/>
 			<SearchStringAddition name="ТаблицаОстатковСтрокаПоиска" id="24">
 				<AdditionSource>
@@ -82,6 +64,7 @@
 				<ContextMenu name="ТаблицаОстатковУправлениеПоискомКонтекстноеМеню" id="31"/>
 				<ExtendedTooltip name="ТаблицаОстатковУправлениеПоискомРасширеннаяПодсказка" id="32"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="ТаблицаОстатковПанельДействийВыделенныхСтрок" id="33"/>
 			<Events>
 				<Event name="Selection">ТаблицаОстатковВыбор</Event>
 			</Events>
@@ -92,6 +75,7 @@
 					<Width>8</Width>
 					<ContextMenu name="ТаблицаОстатковКонтрагентКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ТаблицаОстатковКонтрагентExtendedTooltip" id="20"/>
+					<SelectedItemsActionsPanel name="ТаблицаОстатковКонтрагентПанельДействийВыделенныхСтрок" id="34"/>
 				</LabelField>
 				<LabelField name="ТаблицаОстатковВалюта" id="8">
 					<DataPath>ТаблицаОстатков.Валюта</DataPath>
@@ -99,6 +83,7 @@
 					<Width>5</Width>
 					<ContextMenu name="ТаблицаОстатковВалютаКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ТаблицаОстатковВалютаExtendedTooltip" id="21"/>
+					<SelectedItemsActionsPanel name="ТаблицаОстатковВалютаПанельДействийВыделенныхСтрок" id="35"/>
 				</LabelField>
 				<LabelField name="ТаблицаОстатковНашДолг" id="2">
 					<DataPath>ТаблицаОстатков.НашДолг</DataPath>
@@ -106,6 +91,7 @@
 					<Width>6</Width>
 					<ContextMenu name="ТаблицаОстатковНашДолгКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="ТаблицаОстатковНашДолгExtendedTooltip" id="22"/>
+					<SelectedItemsActionsPanel name="ТаблицаОстатковНашДолгПанельДействийВыделенныхСтрок" id="36"/>
 				</LabelField>
 				<LabelField name="ТаблицаОстатковДолгНам" id="3">
 					<DataPath>ТаблицаОстатков.ДолгНам</DataPath>
@@ -113,6 +99,7 @@
 					<Width>6</Width>
 					<ContextMenu name="ТаблицаОстатковДолгНамКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ТаблицаОстатковДолгНамExtendedTooltip" id="23"/>
+					<SelectedItemsActionsPanel name="ТаблицаОстатковДолгНамПанельДействийВыделенныхСтрок" id="37"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -203,10 +190,6 @@
 					<v8:content>Обновить</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Refresh</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>ОбновитьВыполнить</Action>
 		</Command>
 	</Commands>

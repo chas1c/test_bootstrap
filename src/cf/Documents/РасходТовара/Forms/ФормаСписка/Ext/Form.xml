@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ОтборНаСервере" id="19">
@@ -26,22 +30,24 @@
 			</ToolTip>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="33"/>
 		</UsualGroup>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
+			<TitleLocation>Auto</TitleLocation>
 			<SkipOnInput>false</SkipOnInput>
 			<DefaultItem>true</DefaultItem>
 			<HeightInTableRows>10</HeightInTableRows>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<RowSelectionMode>Cell</RowSelectionMode>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<BorderColor>style:BorderColor</BorderColor>
+			<ShowCommandBar>auto</ShowCommandBar>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -65,7 +71,6 @@
 						<CommandName>Document.РасходТовара.Command.ПечатьРасходнойНакладной</CommandName>
 						<DataPath>Items.Список.CurrentData.Ref</DataPath>
 						<TextColor>style:ButtonTextColor</TextColor>
-						<BackColor>style:ButtonBackColor</BackColor>
 						<BorderColor>style:BorderColor</BorderColor>
 						<ExtendedTooltip name="Документ.РасходТовара.Команда.ПечатьРасходнойНакладнойExtendedTooltip" id="23"/>
 					</Button>
@@ -97,6 +102,7 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="41"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="42"/>
 			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="СписокПанельДействийВыделенныхСтрок" id="43"/>
 			<ChildItems>
 				<LabelField name="Дата" id="4">
 					<DataPath>Список.Date</DataPath>
@@ -110,6 +116,7 @@
 					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаExtendedTooltip" id="25"/>
+					<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="44"/>
 				</LabelField>
 				<LabelField name="Номер" id="6">
 					<DataPath>Список.Number</DataPath>
@@ -122,11 +129,13 @@
 					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="НомерExtendedTooltip" id="26"/>
+					<SelectedItemsActionsPanel name="НомерПанельДействийВыделенныхСтрок" id="45"/>
 				</LabelField>
 				<LabelField name="Организация" id="20">
 					<DataPath>Список.Организация</DataPath>
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="27"/>
+					<SelectedItemsActionsPanel name="ОрганизацияПанельДействийВыделенныхСтрок" id="46"/>
 				</LabelField>
 				<LabelField name="Покупатель" id="8">
 					<DataPath>Список.Покупатель</DataPath>
@@ -139,7 +148,44 @@
 					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="ПокупательКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ПокупательExtendedTooltip" id="28"/>
+					<SelectedItemsActionsPanel name="ПокупательПанельДействийВыделенныхСтрок" id="47"/>
 				</LabelField>
+				<ColumnGroup name="СуммаДокумента" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Group>InCell</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<FixingInTable>Left</FixingInTable>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<LabelField name="Сумма" id="55">
+							<DataPath>Список.Сумма</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="57"/>
+							<SelectedItemsActionsPanel name="СуммаПанельДействийВыделенныхСтрок" id="58"/>
+						</LabelField>
+						<LabelField name="Валюта" id="12">
+							<DataPath>Список.Валюта</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валюта взаиморасчетов</v8:content>
+								</v8:item>
+							</Title>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ВалютаКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ВалютаExtendedTooltip" id="30"/>
+							<SelectedItemsActionsPanel name="ВалютаПанельДействийВыделенныхСтрок" id="49"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
 				<LabelField name="Склад" id="10">
 					<DataPath>Список.Склад</DataPath>
 					<Title>
@@ -148,20 +194,9 @@
 							<v8:content>Склад</v8:content>
 						</v8:item>
 					</Title>
-					<FixingInTable>Left</FixingInTable>
 					<ContextMenu name="СкладКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="СкладExtendedTooltip" id="29"/>
-				</LabelField>
-				<LabelField name="Валюта" id="12">
-					<DataPath>Список.Валюта</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Валюта взаиморасчетов</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ВалютаКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="ВалютаExtendedTooltip" id="30"/>
+					<SelectedItemsActionsPanel name="СкладПанельДействийВыделенныхСтрок" id="48"/>
 				</LabelField>
 				<LabelField name="ВидЦен" id="14">
 					<DataPath>Список.ВидЦен</DataPath>
@@ -173,6 +208,7 @@
 					</Title>
 					<ContextMenu name="ВидЦенКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ВидЦенExtendedTooltip" id="31"/>
+					<SelectedItemsActionsPanel name="ВидЦенПанельДействийВыделенныхСтрок" id="50"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -221,5 +257,26 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Организация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Список.Организация</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипОтметки</dcscor:parameter>
+						<dcscor:value xsi:type="lf:TableCellMarkType">ShapeUnderTextOval</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 </Form>

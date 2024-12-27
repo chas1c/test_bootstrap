@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Configuration uuid="a3a9949e-f1f0-4b3a-821f-a85a9fb2fb3c">
 		<InternalInfo>
 			<xr:ContainedObject>
@@ -39,9 +39,9 @@
 					<v8:content>Демонстрационное приложение</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment> </Comment>
+			<Comment/>
 			<NamePrefix/>
-			<ConfigurationExtensionCompatibilityMode>Version8_3_25</ConfigurationExtensionCompatibilityMode>
+			<ConfigurationExtensionCompatibilityMode>Version8_5_1</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Фирма "1С"</Vendor>
-			<Version>1.0.39.2</Version>
+			<Version>2.0.0.11</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -72,6 +72,14 @@
 			<DefaultDataHistoryVersionDataForm/>
 			<DefaultDataHistoryVersionDifferencesForm/>
 			<DefaultCollaborationSystemUsersChoiceForm>CommonForm.ФормаВыбораПользователяСистемыВзаимодействия</DefaultCollaborationSystemUsersChoiceForm>
+			<AuxiliaryDefaultReportForm/>
+			<AuxiliaryDefaultReportVariantForm/>
+			<AuxiliaryDefaultReportSettingsForm/>
+			<AuxiliaryDefaultDynamicListSettingsForm/>
+			<AuxiliaryDefaultDataHistoryChangeHistoryForm/>
+			<AuxiliaryDefaultDataHistoryVersionDataForm/>
+			<AuxiliaryDefaultDataHistoryVersionDifferencesForm/>
+			<AuxiliaryDefaultCollaborationSystemUsersChoiceForm/>
 			<RequiredMobileApplicationPermissions/>
 			<UsedMobileApplicationFunctionalities>
 				<app:functionality>
@@ -292,8 +300,18 @@
 					<app:isCustom>false</app:isCustom>
 				</v8:Value>
 			</AllowedIncomingShareRequestTypes>
+			<MainClientApplicationWindowInterfaceVariant>NavigationLeft</MainClientApplicationWindowInterfaceVariant>
+			<ClientApplicationTheme>Auto</ClientApplicationTheme>
 			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
+			<ClientApplicationWindowsOpeningVariant>OpenDataInDialogs</ClientApplicationWindowsOpeningVariant>
 			<DefaultInterface/>
+			<Caption/>
+			<ShortCaption>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Демо</v8:content>
+				</v8:item>
+			</ShortCaption>
 			<DefaultStyle/>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation>
@@ -311,7 +329,7 @@
 			<Copyright>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Copyright © ООО "1C-Софт", 2023</v8:content>
+					<v8:content>Copyright © ООО "1C-Софт", 2025</v8:content>
 				</v8:item>
 			</Copyright>
 			<VendorInformationAddress>
@@ -330,9 +348,10 @@
 			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
 			<ModalityUseMode>DontUse</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
-			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
+			<InterfaceCompatibilityMode>Version8_5</InterfaceCompatibilityMode>
+			<InterfaceVersion85ConvertationMode>DontUse</InterfaceVersion85ConvertationMode>
 			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
-			<CompatibilityMode>Version8_3_25</CompatibilityMode>
+			<CompatibilityMode>Version8_3_24</CompatibilityMode>
 			<DefaultConstantsForm>CommonForm.ОбщиеНастройки</DefaultConstantsForm>
 		</Properties>
 		<ChildObjects>
@@ -347,27 +366,54 @@
 			<StyleItem>ЦветТекстаОшибочногоСостояния</StyleItem>
 			<StyleItem>ШрифтВажнойИнформации</StyleItem>
 			<StyleItem>ЦветТекстаВажнойИнформации</StyleItem>
-			<CommonPicture>Позвонить</CommonPicture>
-			<CommonPicture>ПодсистемаПредприятие</CommonPicture>
+			<StyleItem>ЦветВысокогоУровняПродаж</StyleItem>
+			<StyleItem>ЦветСреднегоУровняПродаж</StyleItem>
+			<StyleItem>ЦветНизкогоУровняПродаж</StyleItem>
+			<CommonPicture>ПодсистемаЗакупки</CommonPicture>
 			<CommonPicture>ПодсистемаПродажи</CommonPicture>
 			<CommonPicture>ПодсистемаТоварныеЗапасы</CommonPicture>
 			<CommonPicture>ПодсистемаФинансы</CommonPicture>
-			<CommonPicture>КоллекцияВидыАктивныхПользователей</CommonPicture>
-			<CommonPicture>КоллекцияВидыСобытийЖурналаРегистрации</CommonPicture>
-			<CommonPicture>КоллекцияДляПомеченныхНаУдалениеОбъектов</CommonPicture>
-			<CommonPicture>ПолнотекстовыйПоискДалее</CommonPicture>
-			<CommonPicture>ПолнотекстовыйПоискНазад</CommonPicture>
-			<CommonPicture>ОткрытьХранимыйФайл</CommonPicture>
-			<CommonPicture>ПодсистемаЗакупки</CommonPicture>
+			<CommonPicture>ПодсистемаПредприятие</CommonPicture>
+			<CommonPicture>ГруппаИзбранное</CommonPicture>
+			<CommonPicture>ГруппаНазад</CommonPicture>
 			<CommonPicture>ПроверитьПочту</CommonPicture>
+			<CommonPicture>НаписатьПисьмо</CommonPicture>
 			<CommonPicture>СписокЗаказов</CommonPicture>
-			<CommonPicture>ШтрихКод</CommonPicture>
+			<CommonPicture>Штрихкод</CommonPicture>
+			<CommonPicture>NFC</CommonPicture>
+			<CommonPicture>Микрофон</CommonPicture>
+			<CommonPicture>Фотокамера</CommonPicture>
 			<CommonPicture>ВыделитьВажное</CommonPicture>
-			<CommonPicture>ОтправитьСМС</CommonPicture>
 			<CommonPicture>ПланировщикПеренестиНаСледующийДень</CommonPicture>
 			<CommonPicture>Контрагент</CommonPicture>
-			<CommonPicture>NFC</CommonPicture>
 			<CommonPicture>Копировать</CommonPicture>
+			<CommonPicture>Ответить</CommonPicture>
+			<CommonPicture>СкачатьФайл</CommonPicture>
+			<CommonPicture>ЗагрузитьФайл</CommonPicture>
+			<CommonPicture>СканироватьДокумент</CommonPicture>
+			<CommonPicture>День</CommonPicture>
+			<CommonPicture>Неделя</CommonPicture>
+			<CommonPicture>Месяц</CommonPicture>
+			<CommonPicture>Финансы</CommonPicture>
+			<CommonPicture>Список</CommonPicture>
+			<CommonPicture>СМС</CommonPicture>
+			<CommonPicture>Телефон</CommonPicture>
+			<CommonPicture>Сайт</CommonPicture>
+			<CommonPicture>ЭлектроннаяПочта</CommonPicture>
+			<CommonPicture>Адрес</CommonPicture>
+			<CommonPicture>ТекущееМестоположение</CommonPicture>
+			<CommonPicture>Карта</CommonPicture>
+			<CommonPicture>Маршрут</CommonPicture>
+			<CommonPicture>Группа</CommonPicture>
+			<CommonPicture>КругЗеленый</CommonPicture>
+			<CommonPicture>КругОранжевый</CommonPicture>
+			<CommonPicture>КругСиний</CommonPicture>
+			<CommonPicture>КругЖелтый</CommonPicture>
+			<CommonPicture>УдалениеПозицииЗаказа</CommonPicture>
+			<CommonPicture>Запятая</CommonPicture>
+			<CommonPicture>ЗнакИнформация</CommonPicture>
+			<CommonPicture>ВосклицательныйЗнак</CommonPicture>
+			<CommonPicture>ЗнакКрест</CommonPicture>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<SessionParameter>ЯщикIMAP</SessionParameter>
 			<Role>Администратор</Role>
@@ -375,6 +421,7 @@
 			<Role>МенеджерПоПродажам</Role>
 			<Role>Продавец</Role>
 			<Role>ПользовательБот</Role>
+			<Role>Кассир</Role>
 			<CommonTemplate>ДрайверСканераШтрихкодов</CommonTemplate>
 			<CommonTemplate>КомпонентаПечатиШтрихкодовWindows32</CommonTemplate>
 			<CommonTemplate>КомпонентаПечатиШтрихкодовWindows64</CommonTemplate>
@@ -422,8 +469,9 @@
 			<FunctionalOption>ВалютныйУчет</FunctionalOption>
 			<FunctionalOptionsParameter>Организация</FunctionalOptionsParameter>
 			<Bot>ОфисМенеджер</Bot>
+			<PaletteColor>Серый</PaletteColor>
 			<CommonCommand>УстановитьСканерШтрихкодов</CommonCommand>
-			<CommonCommand>НастроитьСканерШтрихКодов</CommonCommand>
+			<CommonCommand>НастроитьСканерШтрихкодов</CommonCommand>
 			<CommonCommand>УстановитьРасширениеРаботыСФайлами</CommonCommand>
 			<CommonCommand>УстановитьРасширениеРаботыСКриптографией</CommonCommand>
 			<CommonCommand>УстановитьВидимостьОбъектовЧерезODataAPI</CommonCommand>
@@ -432,37 +480,33 @@
 			<CommonCommand>ОстаткиТоваровНаСкладахКоманда</CommonCommand>
 			<CommandGroup>Информация</CommandGroup>
 			<CommandGroup>Печать</CommandGroup>
-			<Constant>SSLIMAP</Constant>
+			<Constant>ВыборПровайдераГеопозиционирования</Constant>
 			<Constant>SSLPOP3</Constant>
 			<Constant>SSLSMTP</Constant>
 			<Constant>АдресIMAPСервера</Constant>
 			<Constant>АдресPOP3Сервера</Constant>
 			<Constant>АдресSMTPСервера</Constant>
 			<Constant>ВалютаУчета</Constant>
-			<Constant>ВоспроизводитьТекстУведомления</Constant>
-			<Constant>ВыборПровайдераГеопозиционирования</Constant>
-			<Constant>ИдентификаторПриложенияHPK</Constant>
+			<Constant>SSLIMAP</Constant>
+			<Constant>ИмяПровайдера</Constant>
 			<Constant>ИдентификаторПриложенияWNS</Constant>
 			<Constant>ИмяОтправителяПочтовогоСообщения</Constant>
-			<Constant>ИмяПровайдера</Constant>
+			<Constant>ТолькоБесплатные</Constant>
 			<Constant>ИспользоватьAPNS</Constant>
 			<Constant>ИспользоватьFCM</Constant>
-			<Constant>ИспользоватьHPK</Constant>
 			<Constant>ИспользоватьIMAP</Constant>
 			<Constant>ИспользоватьPushУведомления</Constant>
 			<Constant>ИспользоватьWNS</Constant>
-			<Constant>ИспользоватьСетьПередачиДанных</Constant>
 			<Constant>ИспользоватьСотовуюСеть</Constant>
+			<Constant>ИспользоватьСетьПередачиДанных</Constant>
 			<Constant>ИспользоватьСпутники</Constant>
 			<Constant>КлючCервераОтправителяFCM</Constant>
-			<Constant>КлючПриложенияHPK</Constant>
 			<Constant>КлючПриложенияWNS</Constant>
 			<Constant>КодНовогоУзлаПланаОбмена</Constant>
 			<Constant>ЛогинСервисаПередачиPushУведомлений</Constant>
-			<Constant>МаркерДоступаHPK</Constant>
 			<Constant>МаркерДоступаWNS</Constant>
-			<Constant>ОтметкаНаФотоснимкеДата</Constant>
-			<Constant>ОтметкаНаФотоснимкеТекст</Constant>
+			<Constant>УчетПоСкладам</Constant>
+			<Constant>ВоспроизводитьТекстУведомления</Constant>
 			<Constant>ПарольIMAP</Constant>
 			<Constant>ПарольPOP3</Constant>
 			<Constant>ПарольSMTP</Constant>
@@ -476,11 +520,11 @@
 			<Constant>РаботаСТорговымОборудованием</Constant>
 			<Constant>СертификатМобильногоПриложенияIOS</Constant>
 			<Constant>ТаймаутИнтернетПочты</Constant>
-			<Constant>ТолькоБесплатные</Constant>
+			<Constant>ОтметкаНаФотоснимкеДата</Constant>
 			<Constant>ТолькоЗащищеннаяАутентификацияIMAP</Constant>
 			<Constant>ТолькоЗащищеннаяАутентификацияPOP3</Constant>
 			<Constant>ТолькоЗащищеннаяАутентификацияSMTP</Constant>
-			<Constant>УчетПоСкладам</Constant>
+			<Constant>ОтметкаНаФотоснимкеТекст</Constant>
 			<CommonForm>ОбщиеНастройки</CommonForm>
 			<CommonForm>НастройкиМобильногоУстройства</CommonForm>
 			<CommonForm>НастройкаПочты</CommonForm>
@@ -527,7 +571,7 @@
 			<Enum>НазначениеХарактеристик</Enum>
 			<Enum>ИспользоватьПровайдерГеопозиционирования</Enum>
 			<Report>ВзаимосвязьПродажТоваров</Report>
-			<Report>ДашбордПродажи</Report>
+			<Report>ДашбордНачало</Report>
 			<Report>ДинамикаПродаж</Report>
 			<Report>ДокументыОплата</Report>
 			<Report>ОстаткиТоваровНаСкладах</Report>
@@ -535,20 +579,20 @@
 			<Report>ПрайсЛист</Report>
 			<Report>АнализЗаказов</Report>
 			<Report>ОстаткиТоваровНаСкладахМобильный</Report>
+			<DataProcessor>СписокАктивныхПользователей</DataProcessor>
+			<DataProcessor>ЖурналРегистрации</DataProcessor>
 			<DataProcessor>АдминистративныйСервис</DataProcessor>
 			<DataProcessor>ДемонстрацияВозможностейДиаграмм</DataProcessor>
-			<DataProcessor>ЖурналРегистрации</DataProcessor>
 			<DataProcessor>НастройкиПользователя</DataProcessor>
 			<DataProcessor>ПроведениеДокументов</DataProcessor>
 			<DataProcessor>Путеводитель</DataProcessor>
 			<DataProcessor>РедактированиеЦен</DataProcessor>
-			<DataProcessor>СписокАктивныхПользователей</DataProcessor>
 			<DataProcessor>УдалениеПомеченныхОбъектов</DataProcessor>
-			<DataProcessor>УправлениеАгрегатамиПродаж</DataProcessor>
 			<DataProcessor>УправлениеНастройкамиФорм</DataProcessor>
 			<DataProcessor>УправлениеПолнотекстовымПоиском</DataProcessor>
 			<DataProcessor>УправлениеСистемойВзаимодействия</DataProcessor>
 			<DataProcessor>ЭлектроннаяПочта</DataProcessor>
+			<DataProcessor>РабочееМестоКассира</DataProcessor>
 			<InformationRegister>КурсыВалют</InformationRegister>
 			<InformationRegister>ЦеныТоваров</InformationRegister>
 			<InformationRegister>СостояниеВходящихПисем</InformationRegister>

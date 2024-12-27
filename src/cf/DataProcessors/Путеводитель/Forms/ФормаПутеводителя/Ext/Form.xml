@@ -1,35 +1,137 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<Width>90</Width>
-	<Height>30</Height>
-	<CommandBarLocation>None</CommandBarLocation>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Height>35</Height>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<WindowRepresentationMode xsi:type="lf:FormWindowRepresentationMode">InMainWindow</WindowRepresentationMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаНазад" id="10">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Назад</CommandName>
+				<ExtendedTooltip name="ФормаНазадРасширеннаяПодсказка" id="11"/>
+			</Button>
+			<Button name="ФормаВперед" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Вперед</CommandName>
+				<ExtendedTooltip name="ФормаВпередРасширеннаяПодсказка" id="13"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<LabelDecoration name="ДекорацияЕслиНеАдминистратор" id="4">
-			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Некоторая функциональность путеводителя недоступна при работе под ролями, отличными от роли Администратор</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="ДекорацияЕслиНеАдминистраторКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="ДекорацияЕслиНеАдминистраторРасширеннаяПодсказка" id="6"/>
-		</LabelDecoration>
-		<HTMLDocumentField name="ПолеHTML" id="1">
-			<DataPath>ПолеHTML</DataPath>
-			<TitleLocation>None</TitleLocation>
-			<Height>1</Height>
-			<ContextMenu name="ПолеHTMLКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ПолеHTMLExtendedTooltip" id="3"/>
-			<Events>
-				<Event name="DocumentComplete">ПолеHTMLДокументСформирован</Event>
-				<Event name="OnClick">ПолеHTMLПриНажатии</Event>
-			</Events>
-		</HTMLDocumentField>
+		<UsualGroup name="Предупреждение" id="14">
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПредупреждениеРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияПредупреждение" id="16">
+					<Picture>
+						<xr:Ref>StdPicture.Information</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияПредупреждениеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДекорацияПредупреждениеРасширеннаяПодсказка" id="18"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияЕслиНеАдминистратор" id="4">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Font ref="style:SubtitleLevel1" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Некоторая функциональность путеводителя недоступна при работе под ролями, отличными от роли Администратор</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЕслиНеАдминистраторКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДекорацияЕслиНеАдминистраторРасширеннаяПодсказка" id="6"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Путеводитель" id="19">
+			<Group>AutomaticallyScreenTypeSensitive</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПутеводительРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<Table name="ЗаголовкиРазделов" id="21">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>30</Width>
+					<SelectionMode>SingleRow</SelectionMode>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<Header>false</Header>
+					<HorizontalLinesBWA>false</HorizontalLinesBWA>
+					<VerticalLinesBWA>false</VerticalLinesBWA>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<RowActionsShowType>DontShow</RowActionsShowType>
+					<Output>Disable</Output>
+					<DataPath>ЗаголовкиРазделов</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ShowCommandBar>false</ShowCommandBar>
+					<ContextMenu name="ЗаголовкиРазделовКонтекстноеМеню" id="22">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<AutoCommandBar name="ЗаголовкиРазделовКоманднаяПанель" id="23"/>
+					<ExtendedTooltip name="ЗаголовкиРазделовРасширеннаяПодсказка" id="24"/>
+					<SearchStringAddition name="ЗаголовкиРазделовСтрокаПоиска" id="25">
+						<AdditionSource>
+							<Item>ЗаголовкиРазделов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗаголовкиРазделовСтрокаПоискаКонтекстноеМеню" id="26"/>
+						<ExtendedTooltip name="ЗаголовкиРазделовСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЗаголовкиРазделовСостояниеПросмотра" id="28">
+						<AdditionSource>
+							<Item>ЗаголовкиРазделов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗаголовкиРазделовСостояниеПросмотраКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="ЗаголовкиРазделовСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЗаголовкиРазделовУправлениеПоиском" id="31">
+						<AdditionSource>
+							<Item>ЗаголовкиРазделов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗаголовкиРазделовУправлениеПоискомКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ЗаголовкиРазделовУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+					</SearchControlAddition>
+					<SelectedItemsActionsPanel name="ЗаголовкиРазделовПанельДействийВыделенныхСтрок" id="34"/>
+					<Events>
+						<Event name="OnActivateRow">ЗаголовкиРазделовПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ЗаголовкиРазделовЗначение" id="36">
+							<DataPath>ЗаголовкиРазделов.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ЗаголовкиРазделовЗначениеКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ЗаголовкиРазделовЗначениеРасширеннаяПодсказка" id="38"/>
+							<SelectedItemsActionsPanel name="ЗаголовкиРазделовЗначениеПанельДействийВыделенныхСтрок" id="39"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Pages name="Страницы" id="8">
+					<Width>70</Width>
+					<VerticalStretch>true</VerticalStretch>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="9"/>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -39,12 +141,6 @@
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
 		<Attribute name="ПолеHTML" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Поле HTML</v8:content>
-				</v8:item>
-			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
@@ -96,7 +192,61 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ЗаголовкиРазделов" id="4">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="Назад" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Назад</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Вперед" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Вперед</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
 	<Parameters>
 		<Parameter name="МобильныйВариант">
 			<Type>

@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
 		<ChildItems>
 			<Button name="Ответить" id="20">
 				<Type>CommandBarButton</Type>
@@ -21,24 +24,33 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Дата" id="3">
-			<DataPath>Объект.Дата</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-			<ExtendedTooltip name="ДатаExtendedTooltip" id="30"/>
-		</InputField>
 		<InputField name="Наименование" id="1">
 			<DataPath>Объект.Description</DataPath>
 			<DefaultItem>true</DefaultItem>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="31"/>
+			<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="39"/>
+		</InputField>
+		<InputField name="Дата" id="3">
+			<DataPath>Объект.Дата</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДатаExtendedTooltip" id="30"/>
+			<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="38"/>
 		</InputField>
 		<InputField name="Адресат" id="5">
 			<DataPath>Объект.Отправитель</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<HorizontalStretch>true</HorizontalStretch>
 			<ContextMenu name="АдресатКонтекстноеМеню" id="6"/>
 			<ExtendedTooltip name="АдресатExtendedTooltip" id="32"/>
+			<SelectedItemsActionsPanel name="АдресатПанельДействийВыделенныхСтрок" id="40"/>
 		</InputField>
 		<Pages name="Группа" id="21">
 			<Title>
@@ -69,13 +81,19 @@
 							<v8:content>Группа HTML</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
 					<ExtendedTooltip name="ГруппаHTMLExtendedTooltip" id="34"/>
 					<ChildItems>
 						<HTMLDocumentField name="HTML" id="24">
 							<DataPath>HTML</DataPath>
 							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
 							<ContextMenu name="HTMLКонтекстноеМеню" id="25"/>
 							<ExtendedTooltip name="HTMLExtendedTooltip" id="35"/>
+							<SelectedItemsActionsPanel name="HTMLПанельДействийВыделенныхСтрок" id="41"/>
 						</HTMLDocumentField>
 					</ChildItems>
 				</Page>
@@ -92,14 +110,18 @@
 							<v8:content>Группа текст</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
 					<ExtendedTooltip name="ГруппаТекстExtendedTooltip" id="36"/>
 					<ChildItems>
 						<InputField name="Текст" id="26">
 							<DataPath>Текст</DataPath>
 							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="ТекстКонтекстноеМеню" id="27"/>
 							<ExtendedTooltip name="ТекстExtendedTooltip" id="37"/>
+							<SelectedItemsActionsPanel name="ТекстПанельДействийВыделенныхСтрок" id="42"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -171,6 +193,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Ответить</Action>
+			<ActionPurpose>Finish</ActionPurpose>
 		</Command>
 	</Commands>
 	<Parameters>

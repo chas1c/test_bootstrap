@@ -185,7 +185,7 @@
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
-		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+		<dcsset:settings xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:userFields>
 				<dcsset:item xsi:type="dcsset:UserFieldExpression">
 					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
@@ -223,9 +223,10 @@
 					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">web:LightGray</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
 							<dcscor:parameter>Шрифт</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="6" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 						</dcscor:item>
@@ -234,22 +235,6 @@
 							<dcscor:value xsi:type="xs:string">ДФ=HH:mm</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
-				</dcsset:item>
-				<dcsset:item>
-					<dcsset:selection/>
-					<dcsset:filter/>
-					<dcsset:appearance>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:parameter>Шрифт</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-						</dcscor:item>
-					</dcsset:appearance>
-					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
-					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
-					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
-					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
-					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
-					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
 				</dcsset:item>
 				<dcsset:item>
 					<dcsset:selection>
@@ -359,5 +344,15 @@
 				</dcsset:selection>
 			</dcsset:item>
 		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Вариант1</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вариант1</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
 	</settingsVariant>
 </DataCompositionSchema>

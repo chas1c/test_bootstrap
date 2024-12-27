@@ -1,64 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
 			<ButtonGroup name="ГруппаКнопокНавигацияПоДням" id="71">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа кнопок навигация по дням</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа кнопок навигация по дням</v8:content>
-					</v8:item>
-				</ToolTip>
 				<HorizontalStretch>true</HorizontalStretch>
 				<Representation>Compact</Representation>
 				<ExtendedTooltip name="ГруппаКнопокНавигацияПоДнямРасширеннаяПодсказка" id="72"/>
 				<ChildItems>
-					<Button name="ФормаНазад" id="31">
+					<Button name="ФормаНазад" id="88">
 						<Type>CommandBarButton</Type>
-						<Representation>Picture</Representation>
-						<Width>3</Width>
-						<CommandName>Form.Item.Планировщик.StandardCommand.Back</CommandName>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-						<ExtendedTooltip name="ФормаНазадРасширеннаяПодсказка" id="32"/>
+						<CommandName>Form.Command.ПерейтиНазад</CommandName>
+						<ExtendedTooltip name="ФормаНазадРасширеннаяПодсказка" id="89"/>
 					</Button>
-					<Button name="ФормаСегодня" id="29">
+					<Button name="ФормаСегодня" id="90">
 						<Type>CommandBarButton</Type>
-						<Representation>Text</Representation>
-						<CommandName>Form.Item.Планировщик.StandardCommand.Today</CommandName>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-						<ExtendedTooltip name="ФормаСегодняРасширеннаяПодсказка" id="30"/>
+						<CommandName>Form.Command.ПерейтиКСегодняшнейДате</CommandName>
+						<ExtendedTooltip name="ФормаСегодняРасширеннаяПодсказка" id="91"/>
 					</Button>
-					<Button name="ФормаВперед" id="33">
+					<Button name="ФормаВперед" id="86">
 						<Type>CommandBarButton</Type>
-						<Representation>Picture</Representation>
-						<Width>3</Width>
-						<CommandName>Form.Item.Планировщик.StandardCommand.Forward</CommandName>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-						<ExtendedTooltip name="ФормаВпередРасширеннаяПодсказка" id="34"/>
+						<CommandName>Form.Command.ПерейтиВперед</CommandName>
+						<ExtendedTooltip name="ФормаВпередРасширеннаяПодсказка" id="87"/>
 					</Button>
 				</ChildItems>
 			</ButtonGroup>
 			<ButtonGroup name="ГруппаКнопокНавигацияПоПериодам" id="75">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа кнопок навигация по периодам</v8:content>
-					</v8:item>
-				</Title>
 				<ToolTip>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Группа кнопок навигация по периодам</v8:content>
+						<v8:content>\</v8:content>
 					</v8:item>
 				</ToolTip>
-				<Representation>Compact</Representation>
 				<ExtendedTooltip name="ГруппаКнопокНавигацияПоПериодамРасширеннаяПодсказка" id="76"/>
 				<ChildItems>
 					<Button name="ФормаДень" id="77">
@@ -83,18 +60,6 @@
 				</ChildItems>
 			</ButtonGroup>
 			<ButtonGroup name="ГруппаНастройки" id="49">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа настройки</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа настройки</v8:content>
-					</v8:item>
-				</ToolTip>
 				<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="50"/>
 				<ChildItems>
 					<Button name="ФормаОбновить" id="51">
@@ -132,16 +97,8 @@
 					<v8:content>Выбор даты</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа выбора дат</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalStretch>false</HorizontalStretch>
 			<Group>Vertical</Group>
 			<Behavior>PopUp</Behavior>
-			<Representation>None</Representation>
 			<ExtendedTooltip name="ГруппаВыбораДатРасширеннаяПодсказка" id="4"/>
 			<ChildItems>
 				<CalendarField name="ДатаОтображения" id="5">
@@ -149,11 +106,14 @@
 					<TitleLocation>None</TitleLocation>
 					<Width>10</Width>
 					<Height>10</Height>
+					<HorizontalStretch>false</HorizontalStretch>
 					<VerticalStretch>false</VerticalStretch>
 					<SelectionMode>Interval</SelectionMode>
 					<BorderColor>style:FormBackColor</BorderColor>
+					<WidthInMonths>2</WidthInMonths>
 					<ContextMenu name="ДатаОтображенияКонтекстноеМеню" id="6"/>
 					<ExtendedTooltip name="ДатаОтображенияРасширеннаяПодсказка" id="7"/>
+					<SelectedItemsActionsPanel name="ДатаОтображенияПанельДействийВыделенныхСтрок" id="83"/>
 					<Events>
 						<Event name="OnChange">ДатаОтображенияПриИзменении</Event>
 						<Event name="Selection">ДатаОтображенияВыбор</Event>
@@ -163,18 +123,6 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаПланировщика" id="25">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа планировщика</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа планировщика</v8:content>
-				</v8:item>
-			</ToolTip>
 			<HorizontalStretch>true</HorizontalStretch>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
@@ -185,11 +133,12 @@
 				<PlannerField name="Планировщик" id="61">
 					<DataPath>Планировщик</DataPath>
 					<TitleLocation>None</TitleLocation>
-					<Width>10</Width>
-					<Height>1</Height>
+					<Width>80</Width>
+					<Height>14</Height>
 					<DimensionItemHyperlink>true</DimensionItemHyperlink>
 					<ContextMenu name="ПланировщикКонтекстноеМеню" id="62"/>
 					<ExtendedTooltip name="ПланировщикРасширеннаяПодсказка" id="63"/>
+					<SelectedItemsActionsPanel name="ПланировщикПанельДействийВыделенныхСтрок" id="84"/>
 					<Events>
 						<Event name="TimeScaleItemClick">ПланировщикНажатиеНаЭлементеШкалыВремени</Event>
 						<Event name="BeforeCreate">ПланировщикПередСозданием</Event>
@@ -217,6 +166,7 @@
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="ОтображатьВстречиДругихПользователейКонтекстноеМеню" id="65"/>
 			<ExtendedTooltip name="ОтображатьВстречиДругихПользователейРасширеннаяПодсказка" id="66"/>
+			<SelectedItemsActionsPanel name="ОтображатьВстречиДругихПользователейПанельДействийВыделенныхСтрок" id="85"/>
 			<Events>
 				<Event name="OnChange">ОтображатьВстречиДругихПользователейПриИзменении</Event>
 			</Events>
@@ -303,7 +253,7 @@
 					<pl:end>2015-08-06T23:59:59</pl:end>
 				</pl:period>
 				<pl:displayCurrentDate>true</pl:displayCurrentDate>
-				<pl:itemsTimeRepresentation>BeginTime</pl:itemsTimeRepresentation>
+				<pl:itemsTimeRepresentation>BeginAndEndTime</pl:itemsTimeRepresentation>
 				<pl:itemsBehaviorWhenSpaceInsufficient>ShowAllItems</pl:itemsBehaviorWhenSpaceInsufficient>
 				<pl:autoMinColumnWidth>false</pl:autoMinColumnWidth>
 				<pl:autoMinRowHeight>false</pl:autoMinRowHeight>
@@ -400,6 +350,16 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ЦветТекущегоДня" id="3">
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветНеТекущегоМесяца" id="7">
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Обновить" id="1">
@@ -437,6 +397,10 @@
 					<v8:content>День</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.День</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ФормаДень</Action>
 		</Command>
 		<Command name="ФормаНеделя" id="3">
@@ -452,6 +416,10 @@
 					<v8:content>Неделя</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Неделя</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ФормаНеделя</Action>
 		</Command>
 		<Command name="ФормаМесяц" id="4">
@@ -467,7 +435,68 @@
 					<v8:content>Месяц</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Месяц</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ФормаМесяц</Action>
+		</Command>
+		<Command name="ПерейтиВперед" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать следующий период отображения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GoForward</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Вперед</Action>
+		</Command>
+		<Command name="ПерейтиНазад" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать предыдущий период отображения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GoBack</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Назад</Action>
+		</Command>
+		<Command name="ПерейтиКСегодняшнейДате" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегодя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переход к сегодняшней дате</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Today</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПерейтиКСегодняшнейДате</Action>
 		</Command>
 	</Commands>
 </Form>

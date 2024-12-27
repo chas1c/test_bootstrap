@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -8,108 +8,103 @@
 	</Title>
 	<Width>80</Width>
 	<Height>80</Height>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
-	<CommandBarLocation>None</CommandBarLocation>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<CreateButtonsGroupTitle>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Написать</v8:content>
+		</v8:item>
+	</CreateButtonsGroupTitle>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<ButtonGroup name="ГруппаНовоеПисьмо" id="71">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа новое письмо</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа новое письмо</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаНовоеПисьмоРасширеннаяПодсказка" id="72"/>
+				<ChildItems>
+					<Button name="КомандаНовоеПисьмо" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаНовоеПисьмо</CommandName>
+						<ExtendedTooltip name="КомандаНовоеПисьмоExtendedTooltip" id="49"/>
+					</Button>
+					<Button name="КомандаНовоеПисьмоПоШаблону" id="69">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаНовоеПисьмоПоШаблону</CommandName>
+						<ExtendedTooltip name="КомандаНовоеПисьмоПоШаблонуРасширеннаяПодсказка" id="70"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="КомандаОтветить" id="25">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОтветить</CommandName>
+				<ExtendedTooltip name="КомандаОтветитьExtendedTooltip" id="50"/>
+			</Button>
+			<ButtonGroup name="ГруппаПолучитьПисьма" id="73">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа получить письма</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа получить письма</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаПолучитьПисьмаРасширеннаяПодсказка" id="74"/>
+				<ChildItems>
+					<Button name="КомандаПолучитьПисьма" id="24">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПолучитьПисьма</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Refresh</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="КомандаПолучитьПисьмаExtendedTooltip" id="48"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="КомандаНастройкаПочты" id="42">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаНастроить</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="КомандаНастройкаПочтыExtendedTooltip" id="53"/>
+			</Button>
+			<Button name="КомандаСоздатьПочтовыйЯщикIMAP" id="41">
+				<Type>CommandBarButton</Type>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.КомандаСоздатьПочтовыйЯщикIMAP</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="КомандаСоздатьПочтовыйЯщикIMAPExtendedTooltip" id="51"/>
+			</Button>
+			<Button name="Справка" id="33">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="СправкаExtendedTooltip" id="52"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<CommandBar name="ГруппаКоманднаяПанель" id="22">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа командная панель</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа командная панель</v8:content>
-				</v8:item>
-			</ToolTip>
-			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="47"/>
-			<ChildItems>
-				<ButtonGroup name="ГруппаНовоеПисьмо" id="71">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа новое письмо</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа новое письмо</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаНовоеПисьмоРасширеннаяПодсказка" id="72"/>
-					<ChildItems>
-						<Button name="КомандаНовоеПисьмо" id="23">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.КомандаНовоеПисьмо</CommandName>
-							<ExtendedTooltip name="КомандаНовоеПисьмоExtendedTooltip" id="49"/>
-						</Button>
-						<Button name="КомандаНовоеПисьмоПоШаблону" id="69">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.КомандаНовоеПисьмоПоШаблону</CommandName>
-							<ExtendedTooltip name="КомандаНовоеПисьмоПоШаблонуРасширеннаяПодсказка" id="70"/>
-						</Button>
-					</ChildItems>
-				</ButtonGroup>
-				<Button name="КомандаОтветить" id="25">
-					<Type>CommandBarButton</Type>
-					<CommandName>Form.Command.КомандаОтветить</CommandName>
-					<ExtendedTooltip name="КомандаОтветитьExtendedTooltip" id="50"/>
-				</Button>
-				<ButtonGroup name="ГруппаПолучитьПисьма" id="73">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа получить письма</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа получить письма</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаПолучитьПисьмаРасширеннаяПодсказка" id="74"/>
-					<ChildItems>
-						<Button name="КомандаПолучитьПисьма" id="24">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.КомандаПолучитьПисьма</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.Refresh</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="КомандаПолучитьПисьмаExtendedTooltip" id="48"/>
-						</Button>
-					</ChildItems>
-				</ButtonGroup>
-				<Button name="КомандаСоздатьПочтовыйЯщикIMAP" id="41">
-					<Type>CommandBarButton</Type>
-					<Enabled>false</Enabled>
-					<CommandName>Form.Command.КомандаСоздатьПочтовыйЯщикIMAP</CommandName>
-					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-					<ExtendedTooltip name="КомандаСоздатьПочтовыйЯщикIMAPExtendedTooltip" id="51"/>
-				</Button>
-				<Button name="Справка" id="33">
-					<Type>CommandBarButton</Type>
-					<CommandName>Form.StandardCommand.Help</CommandName>
-					<ExtendedTooltip name="СправкаExtendedTooltip" id="52"/>
-				</Button>
-				<Button name="КомандаНастройкаПочты" id="42">
-					<Type>CommandBarButton</Type>
-					<CommandName>Form.Command.КомандаНастроить</CommandName>
-					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-					<ExtendedTooltip name="КомандаНастройкаПочтыExtendedTooltip" id="53"/>
-				</Button>
-			</ChildItems>
-		</CommandBar>
 		<Pages name="ГруппаСтраницы" id="10">
 			<Title>
 				<v8:item>
@@ -139,6 +134,8 @@
 							<v8:content>Группа входящие</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаВходящиеExtendedTooltip" id="55"/>
 					<ChildItems>
 						<InputField name="ПочтовыйЯщикIMAP" id="37">
@@ -149,94 +146,15 @@
 							<ChoiceListButton>true</ChoiceListButton>
 							<ContextMenu name="ПочтовыйЯщикIMAPКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="ПочтовыйЯщикIMAPExtendedTooltip" id="56"/>
+							<SelectedItemsActionsPanel name="ПочтовыйЯщикIMAPПанельДействийВыделенныхСтрок" id="119"/>
 							<Events>
 								<Event name="OnChange">ПочтовыйЯщикIMAPПриИзменении</Event>
 							</Events>
 						</InputField>
-						<UsualGroup name="ГруппаПоискВходящие" id="93">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа поиск входящие</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа поиск входящие</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПоискВходящиеРасширеннаяПодсказка" id="94"/>
-							<ChildItems>
-								<ViewStatusAddition name="ОтображениеСостоянияВходящие" id="95">
-									<AdditionSource>
-										<Item>СписокВходящие</Item>
-										<Type>ViewStatusRepresentation</Type>
-									</AdditionSource>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Отображение состояния входящие</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ОтображениеСостоянияВходящиеКонтекстноеМеню" id="96"/>
-									<ExtendedTooltip name="ОтображениеСостоянияВходящиеРасширеннаяПодсказка" id="97"/>
-								</ViewStatusAddition>
-								<CommandBar name="КоманднаяПанельПоискаВходяшие" id="115">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Командная панель поиска входяшие</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Командная панель поиска входяшие</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ExtendedTooltip name="КоманднаяПанельПоискаВходяшиеРасширеннаяПодсказка" id="116"/>
-									<ChildItems>
-										<SearchStringAddition name="СтрокаПоискаВходящие" id="98">
-											<AdditionSource>
-												<Item>СписокВходящие</Item>
-												<Type>SearchStringRepresentation</Type>
-											</AdditionSource>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Строка поиска входящие</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="СтрокаПоискаВходящиеКонтекстноеМеню" id="99"/>
-											<ExtendedTooltip name="СтрокаПоискаВходящиеРасширеннаяПодсказка" id="100"/>
-										</SearchStringAddition>
-										<SearchControlAddition name="УправлениеПоискомВходящие" id="101">
-											<AdditionSource>
-												<Item>СписокВходящие</Item>
-												<Type>SearchControl</Type>
-											</AdditionSource>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Управление поиском входящие</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="УправлениеПоискомВходящиеКонтекстноеМеню" id="102"/>
-											<ExtendedTooltip name="УправлениеПоискомВходящиеРасширеннаяПодсказка" id="103"/>
-										</SearchControlAddition>
-									</ChildItems>
-								</CommandBar>
-							</ChildItems>
-						</UsualGroup>
 						<Table name="СписокВходящие" id="1">
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<RowSelectionMode>Cell</RowSelectionMode>
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
@@ -248,9 +166,6 @@
 								<ExcludedCommand>Create</ExcludedCommand>
 								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -292,27 +207,32 @@
 								<ContextMenu name="СписокВходящиеУправлениеПоискомКонтекстноеМеню" id="82"/>
 								<ExtendedTooltip name="СписокВходящиеУправлениеПоискомРасширеннаяПодсказка" id="83"/>
 							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="СписокВходящиеПанельДействийВыделенныхСтрок" id="120"/>
 							<ChildItems>
 								<LabelField name="ДатаВходящие" id="6">
 									<DataPath>СписокВходящие.Дата</DataPath>
 									<ContextMenu name="ДатаВходящиеКонтекстноеМеню" id="7"/>
 									<ExtendedTooltip name="ДатаВходящиеExtendedTooltip" id="58"/>
+									<SelectedItemsActionsPanel name="ДатаВходящиеПанельДействийВыделенныхСтрок" id="121"/>
 								</LabelField>
 								<LabelField name="НаименованиеВходящие" id="4">
 									<DataPath>СписокВходящие.Description</DataPath>
 									<DefaultItem>true</DefaultItem>
 									<ContextMenu name="НаименованиеВходящиеКонтекстноеМеню" id="5"/>
 									<ExtendedTooltip name="НаименованиеВходящиеExtendedTooltip" id="59"/>
+									<SelectedItemsActionsPanel name="НаименованиеВходящиеПанельДействийВыделенныхСтрок" id="122"/>
 								</LabelField>
 								<LabelField name="СписокВходящиеОтправитель" id="31">
 									<DataPath>СписокВходящие.Отправитель</DataPath>
 									<ContextMenu name="СписокВходящиеОтправительКонтекстноеМеню" id="32"/>
 									<ExtendedTooltip name="СписокВходящиеОтправительExtendedTooltip" id="60"/>
+									<SelectedItemsActionsPanel name="СписокВходящиеОтправительПанельДействийВыделенныхСтрок" id="123"/>
 								</LabelField>
 								<InputField name="СписокВходящиеПочтовыйЯщик" id="43">
 									<DataPath>СписокВходящие.ПочтовыйЯщик</DataPath>
 									<ContextMenu name="СписокВходящиеПочтовыйЯщикКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="СписокВходящиеПочтовыйЯщикExtendedTooltip" id="61"/>
+									<SelectedItemsActionsPanel name="СписокВходящиеПочтовыйЯщикПанельДействийВыделенныхСтрок" id="124"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -331,91 +251,13 @@
 							<v8:content>Группа исходящие</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
 					<ExtendedTooltip name="ГруппаИсходящиеExtendedTooltip" id="62"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаПоискИсходящие" id="104">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа поиск исходящие</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа поиск исходящие</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПоискИсходящиеРасширеннаяПодсказка" id="105"/>
-							<ChildItems>
-								<ViewStatusAddition name="СостояниеПросмотраИсходящие" id="106">
-									<AdditionSource>
-										<Item>СписокИсходящие</Item>
-										<Type>ViewStatusRepresentation</Type>
-									</AdditionSource>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Состояние просмотра исходящие</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="СостояниеПросмотраИсходящиеКонтекстноеМеню" id="107"/>
-									<ExtendedTooltip name="СостояниеПросмотраИсходящиеРасширеннаяПодсказка" id="108"/>
-								</ViewStatusAddition>
-								<CommandBar name="КоманднаяПанельПоискаИсходяшие" id="117">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Командная панель поиска исходяшие</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Командная панель поиска исходяшие</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ExtendedTooltip name="КоманднаяПанельПоискаИсходяшиеРасширеннаяПодсказка" id="118"/>
-									<ChildItems>
-										<SearchStringAddition name="СтрокаПоискаИсходящие" id="109">
-											<AdditionSource>
-												<Item>СписокИсходящие</Item>
-												<Type>SearchStringRepresentation</Type>
-											</AdditionSource>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Строка поиска исходящие</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="СтрокаПоискаИсходящиеКонтекстноеМеню" id="110"/>
-											<ExtendedTooltip name="СтрокаПоискаИсходящиеРасширеннаяПодсказка" id="111"/>
-										</SearchStringAddition>
-										<SearchControlAddition name="УправлениеПоискомИсходящие" id="112">
-											<AdditionSource>
-												<Item>СписокИсходящие</Item>
-												<Type>SearchControl</Type>
-											</AdditionSource>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Управление поиском исходящие</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="УправлениеПоискомИсходящиеКонтекстноеМеню" id="113"/>
-											<ExtendedTooltip name="УправлениеПоискомИсходящиеРасширеннаяПодсказка" id="114"/>
-										</SearchControlAddition>
-									</ChildItems>
-								</CommandBar>
-							</ChildItems>
-						</UsualGroup>
 						<Table name="СписокИсходящие" id="13">
 							<CommandBarLocation>None</CommandBarLocation>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<RowSelectionMode>Cell</RowSelectionMode>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>СписокИсходящие</DataPath>
@@ -425,9 +267,6 @@
 								<ExcludedCommand>Create</ExcludedCommand>
 								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 							</CommandSet>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -469,27 +308,32 @@
 								<ContextMenu name="СписокИсходящиеУправлениеПоискомКонтекстноеМеню" id="91"/>
 								<ExtendedTooltip name="СписокИсходящиеУправлениеПоискомРасширеннаяПодсказка" id="92"/>
 							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="СписокИсходящиеПанельДействийВыделенныхСтрок" id="126"/>
 							<ChildItems>
 								<LabelField name="ДатаИсходящие" id="18">
 									<DataPath>СписокИсходящие.Дата</DataPath>
 									<ContextMenu name="ДатаИсходящиеКонтекстноеМеню" id="19"/>
 									<ExtendedTooltip name="ДатаИсходящиеExtendedTooltip" id="64"/>
+									<SelectedItemsActionsPanel name="ДатаИсходящиеПанельДействийВыделенныхСтрок" id="127"/>
 								</LabelField>
 								<LabelField name="НаименованиеИсходящие" id="16">
 									<DataPath>СписокИсходящие.Description</DataPath>
 									<ContextMenu name="НаименованиеИсходящиеКонтекстноеМеню" id="17"/>
 									<ExtendedTooltip name="НаименованиеИсходящиеExtendedTooltip" id="65"/>
+									<SelectedItemsActionsPanel name="НаименованиеИсходящиеПанельДействийВыделенныхСтрок" id="128"/>
 								</LabelField>
 								<LabelField name="СписокИсходящиеПолучатель" id="29">
 									<DataPath>СписокИсходящие.Получатель</DataPath>
 									<ContextMenu name="СписокИсходящиеПолучательКонтекстноеМеню" id="30"/>
 									<ExtendedTooltip name="СписокИсходящиеПолучательExtendedTooltip" id="66"/>
+									<SelectedItemsActionsPanel name="СписокИсходящиеПолучательПанельДействийВыделенныхСтрок" id="129"/>
 								</LabelField>
 								<CheckBoxField name="СписокИсходящиеОтправлено" id="27">
 									<DataPath>СписокИсходящие.Отправлено</DataPath>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="СписокИсходящиеОтправленоКонтекстноеМеню" id="28"/>
 									<ExtendedTooltip name="СписокИсходящиеОтправленоExtendedTooltip" id="67"/>
+									<SelectedItemsActionsPanel name="СписокИсходящиеОтправленоПанельДействийВыделенныхСтрок" id="130"/>
 								</CheckBoxField>
 							</ChildItems>
 						</Table>
@@ -657,14 +501,9 @@
 					<v8:content>Новое письмо</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда новое письмо</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Action>КомандаНовоеПисьмо</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Create</ActionPurpose>
 		</Command>
 		<Command name="КомандаПолучитьПисьма" id="2">
 			<Title>
@@ -673,13 +512,8 @@
 					<v8:content>Получить письма</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда получить письма</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Action>КомандаПолучитьПисьма</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КомандаОтветить" id="3">
@@ -689,14 +523,15 @@
 					<v8:content>Ответить</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда ответить</v8:content>
-				</v8:item>
-			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Ответить</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>КомандаОтветить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">СписокВходящие</AssociatedTableElementId>
+			<SelectedRowsUse>DontUse</SelectedRowsUse>
 		</Command>
 		<Command name="КомандаСоздатьПочтовыйЯщикIMAP" id="4">
 			<Title>
@@ -705,12 +540,6 @@
 					<v8:content>Создать почтовый ящик</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда создать почтовый ящик IMAP</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Action>КомандаСоздатьПочтовыйЯщикIMAP</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -721,12 +550,10 @@
 					<v8:content>Настроить</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда настроить</v8:content>
-				</v8:item>
-			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Setting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>КомандаНастройкаПочты</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -737,14 +564,9 @@
 					<v8:content>Новое письмо по шаблону</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда новое письмо по шаблону</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Action>КомандаНовоеПисьмоПоШаблону</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Create</ActionPurpose>
 		</Command>
 	</Commands>
 </Form>

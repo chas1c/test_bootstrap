@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Подбор товара</v8:content>
 		</v8:item>
 	</Title>
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>true</ShowCommandBar>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -17,17 +20,12 @@
 				<DefaultButton>true</DefaultButton>
 				<SkipOnInput>false</SkipOnInput>
 				<CommandName>Form.Command.ОК</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
 				<ExtendedTooltip name="ОКExtendedTooltip" id="53"/>
-			</Button>
-			<Button name="Отмена" id="8">
-				<Type>CommandBarButton</Type>
-				<SkipOnInput>false</SkipOnInput>
-				<CommandName>Form.StandardCommand.Cancel</CommandName>
-				<ExtendedTooltip name="ОтменаExtendedTooltip" id="54"/>
 			</Button>
 			<Button name="НачатьСканирование" id="91">
 				<Type>CommandBarButton</Type>
-				<Representation>Picture</Representation>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.НачатьСканирование</CommandName>
 				<Title>
 					<v8:item>
@@ -39,7 +37,7 @@
 			</Button>
 			<Button name="СканироватьNFCМетку" id="113">
 				<Type>CommandBarButton</Type>
-				<Representation>Picture</Representation>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.СканироватьNFCМетку</CommandName>
 				<Title>
 					<v8:item>
@@ -88,8 +86,8 @@
 							<DefaultItem>true</DefaultItem>
 							<ChoiceMode>true</ChoiceMode>
 							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Cell</RowSelectionMode>
 							<Header>false</Header>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -100,6 +98,7 @@
 							<SearchStringLocation>Top</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
+							<ShowCommandBar>false</ShowCommandBar>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -141,6 +140,7 @@
 								<ContextMenu name="СписокТоваровУправлениеПоискомКонтекстноеМеню" id="102"/>
 								<ExtendedTooltip name="СписокТоваровУправлениеПоискомРасширеннаяПодсказка" id="103"/>
 							</SearchControlAddition>
+							<SelectedItemsActionsPanel name="СписокТоваровПанельДействийВыделенныхСтрок" id="115"/>
 							<Events>
 								<Event name="ValueChoice">СписокТоваровВыборЗначения</Event>
 							</Events>
@@ -151,6 +151,7 @@
 									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 									<ContextMenu name="НаименованиеКонтекстноеМеню" id="27"/>
 									<ExtendedTooltip name="НаименованиеExtendedTooltip" id="70"/>
+									<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="116"/>
 								</LabelField>
 								<LabelField name="Код" id="9">
 									<DataPath>СписокТоваров.Код</DataPath>
@@ -158,6 +159,7 @@
 									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 									<ContextMenu name="КодКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="КодExtendedTooltip" id="71"/>
+									<SelectedItemsActionsPanel name="КодПанельДействийВыделенныхСтрок" id="117"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -186,8 +188,8 @@
 					<Height>4</Height>
 					<HeightControlVariant>UseHeightInTableRows</HeightControlVariant>
 					<SelectionMode>SingleRow</SelectionMode>
+					<RowSelectionMode>Cell</RowSelectionMode>
 					<Header>false</Header>
-					<UseAlternationRowColor>true</UseAlternationRowColor>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableDrag>true</EnableDrag>
 					<FileDragMode>AsFile</FileDragMode>
@@ -231,25 +233,28 @@
 						<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="111"/>
 						<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="112"/>
 					</SearchControlAddition>
+					<SelectedItemsActionsPanel name="ТоварыПанельДействийВыделенныхСтрок" id="119"/>
 					<ChildItems>
 						<InputField name="ТоварыТовар" id="34">
 							<DataPath>Товары.Товар</DataPath>
 							<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<Wrap>false</Wrap>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="ТоварыТоварКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="ТоварыТоварExtendedTooltip" id="77"/>
+							<SelectedItemsActionsPanel name="ТоварыТоварПанельДействийВыделенныхСтрок" id="120"/>
 						</InputField>
 						<InputField name="ТоварыКоличество" id="36">
 							<DataPath>Товары.Количество</DataPath>
 							<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
 							<Wrap>false</Wrap>
 							<SpinButton>true</SpinButton>
-							<BorderColor>style:BorderColor</BorderColor>
 							<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="37"/>
 							<ExtendedTooltip name="ТоварыКоличествоExtendedTooltip" id="78"/>
+							<SelectedItemsActionsPanel name="ТоварыКоличествоПанельДействийВыделенныхСтрок" id="121"/>
 							<Events>
 								<Event name="OnChange">ТоварыКоличествоПриИзменении</Event>
 							</Events>
@@ -364,17 +369,12 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ОК</v8:content>
+					<v8:content>Выбрать</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ОК</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Action>ОКВыполнить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
 		</Command>
 		<Command name="НачатьСканирование" id="2">
 			<Title>
@@ -390,7 +390,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>CommonPicture.ШтрихКод</xr:Ref>
+				<xr:Ref>CommonPicture.Штрихкод</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>НачатьСканирование</Action>

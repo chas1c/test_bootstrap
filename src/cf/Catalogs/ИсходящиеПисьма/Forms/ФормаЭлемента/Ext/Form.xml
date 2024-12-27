@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>true</ShowCommandBar>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -10,6 +14,7 @@
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.ОтправитьИЗакрыть</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
 				<ExtendedTooltip name="ОтправитьИЗакрытьExtendedTooltip" id="26"/>
 			</Button>
 			<Button name="Отправить" id="12">
@@ -25,19 +30,18 @@
 			</Button>
 			<Button name="Записать" id="13">
 				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ExtendedTooltip name="ЗаписатьExtendedTooltip" id="28"/>
-			</Button>
-			<Button name="Справка" id="14">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Help</CommandName>
-				<ExtendedTooltip name="СправкаExtendedTooltip" id="29"/>
 			</Button>
 			<Button name="ФормаИсторияИзменений" id="46">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.ChangeHistory</CommandName>
 				<ExtendedTooltip name="ФормаИсторияИзмененийРасширеннаяПодсказка" id="47"/>
+			</Button>
+			<Button name="Справка" id="14">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="СправкаExtendedTooltip" id="29"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -49,46 +53,28 @@
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Дата" id="3">
-			<DataPath>Объект.Дата</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-			<ExtendedTooltip name="ДатаExtendedTooltip" id="30"/>
-		</InputField>
-		<InputField name="Наименование" id="1">
-			<DataPath>Объект.Description</DataPath>
-			<DefaultItem>true</DefaultItem>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="31"/>
-		</InputField>
-		<InputField name="Контрагент" id="43">
-			<DataPath>Объект.Контрагент</DataPath>
-			<ContextMenu name="КонтрагентКонтекстноеМеню" id="44"/>
-			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="45"/>
-			<Events>
-				<Event name="OnChange">КонтрагентПриИзменении</Event>
-			</Events>
-		</InputField>
-		<UsualGroup name="ГруппаПолучатель" id="22">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа получатель</v8:content>
-				</v8:item>
-			</Title>
+		<UsualGroup name="Основное" id="53">
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа получатель</v8:content>
+					<v8:content>Основное</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Horizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
+			<Group>Vertical</Group>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаПолучательExtendedTooltip" id="32"/>
+			<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="54"/>
 			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="31"/>
+					<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="49"/>
+				</InputField>
 				<InputField name="Получатели" id="5">
 					<DataPath>Объект.Получатели</DataPath>
 					<Title>
@@ -98,14 +84,20 @@
 						</v8:item>
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
-					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoEditMode>true</AutoEditMode>
 					<DropListButton>true</DropListButton>
 					<ClearButton>false</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<MultipleValuesHyperlink>true</MultipleValuesHyperlink>
 					<MultipleValueDataPath>Объект.Получатели.ЭлектроннаяПочта</MultipleValueDataPath>
+					<SpecialTextInputMode>Email</SpecialTextInputMode>
+					<Picture>
+						<xr:Ref>CommonPicture.ЭлектроннаяПочта</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<ContextMenu name="ПолучателиКонтекстноеМеню" id="6"/>
 					<ExtendedTooltip name="ПолучателиРасширеннаяПодсказка" id="33"/>
+					<SelectedItemsActionsPanel name="ПолучателиПанельДействийВыделенныхСтрок" id="51"/>
 					<Events>
 						<Event name="OnChange">ПолучательПриИзменении</Event>
 						<Event name="AutoComplete">ПолучателиАвтоПодбор</Event>
@@ -113,18 +105,23 @@
 						<Event name="MultipleValueOpening">ПолучателиОткрытиеМножественногоЗначения</Event>
 					</Events>
 				</InputField>
-				<Button name="ВыбратьПолучателя" id="23">
-					<Type>UsualButton</Type>
-					<Visible>false</Visible>
-					<CommandName>0</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Выбрать</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ВыбратьПолучателяExtendedTooltip" id="34"/>
-				</Button>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="30"/>
+					<SelectedItemsActionsPanel name="ДатаПанельДействийВыделенныхСтрок" id="48"/>
+				</InputField>
+				<InputField name="Контрагент" id="43">
+					<DataPath>Объект.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="45"/>
+					<SelectedItemsActionsPanel name="КонтрагентПанельДействийВыделенныхСтрок" id="50"/>
+					<Events>
+						<Event name="OnChange">КонтрагентПриИзменении</Event>
+					</Events>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаРедактор" id="25">
@@ -180,6 +177,7 @@
 					<AutoMaxHeight>false</AutoMaxHeight>
 					<ContextMenu name="СодержимоеКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="СодержимоеExtendedTooltip" id="38"/>
+					<SelectedItemsActionsPanel name="СодержимоеПанельДействийВыделенныхСтрок" id="52"/>
 				</FormattedDocumentField>
 			</ChildItems>
 		</UsualGroup>
@@ -264,6 +262,7 @@
 			<Action>ОтправитьИЗакрыть</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
 		</Command>
 		<Command name="Отправить" id="2">
 			<Title>
@@ -281,6 +280,7 @@
 			<Action>Отправить</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
 		</Command>
 		<Command name="ВставитьКонтактноеЛицо" id="4">
 			<Title>

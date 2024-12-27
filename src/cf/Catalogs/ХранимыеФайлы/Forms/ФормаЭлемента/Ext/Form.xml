@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
@@ -54,19 +57,13 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Владелец" id="4">
-			<DataPath>Объект.Owner</DataPath>
-			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-			<Wrap>false</Wrap>
-			<ContextMenu name="ВладелецКонтекстноеМеню" id="10"/>
-			<ExtendedTooltip name="ВладелецExtendedTooltip" id="30"/>
-		</InputField>
 		<InputField name="Код" id="2">
 			<DataPath>Объект.Code</DataPath>
 			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
 			<Wrap>false</Wrap>
 			<ContextMenu name="КодКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="КодExtendedTooltip" id="31"/>
+			<SelectedItemsActionsPanel name="КодПанельДействийВыделенныхСтрок" id="66"/>
 		</InputField>
 		<InputField name="Наименование" id="3">
 			<DataPath>Объект.Description</DataPath>
@@ -75,6 +72,7 @@
 			<Wrap>false</Wrap>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="9"/>
 			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="32"/>
+			<SelectedItemsActionsPanel name="НаименованиеПанельДействийВыделенныхСтрок" id="67"/>
 		</InputField>
 		<InputField name="ИмяФайла" id="8">
 			<DataPath>Объект.ИмяФайла</DataPath>
@@ -83,7 +81,188 @@
 			<Wrap>false</Wrap>
 			<ContextMenu name="ИмяФайлаКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ИмяФайлаExtendedTooltip" id="33"/>
+			<SelectedItemsActionsPanel name="ИмяФайлаПанельДействийВыделенныхСтрок" id="68"/>
 		</InputField>
+		<InputField name="Владелец" id="4">
+			<DataPath>Объект.Owner</DataPath>
+			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+			<Wrap>false</Wrap>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВладелецExtendedTooltip" id="30"/>
+			<SelectedItemsActionsPanel name="ВладелецПанельДействийВыделенныхСтрок" id="65"/>
+		</InputField>
+		<Button name="ВыбратьФайлСДискаИЗаписать" id="6" DisplayImportance="High">
+			<Type>UsualButton</Type>
+			<SkipOnInput>false</SkipOnInput>
+			<CommandName>Form.Command.ВыбратьФайлСДискаИЗаписать</CommandName>
+			<TextColor>#1C55AE</TextColor>
+			<BackColor>#FFFFFF</BackColor>
+			<BorderColor>style:BorderColor</BorderColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ButtonImportance>Optional</ButtonImportance>
+			<ExtendedTooltip name="ВыбратьФайлСДискаИЗаписатьExtendedTooltip" id="37"/>
+		</Button>
+		<Button name="ПрочитатьФайлИСохранитьНаДиск" id="7" DisplayImportance="High">
+			<Type>UsualButton</Type>
+			<SkipOnInput>false</SkipOnInput>
+			<CommandName>Form.Command.ПрочитатьФайлИСохранитьНаДиск</CommandName>
+			<TextColor>#1C55AE</TextColor>
+			<BackColor>#FFFFFF</BackColor>
+			<BorderColor>style:BorderColor</BorderColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ButtonImportance>Optional</ButtonImportance>
+			<ExtendedTooltip name="ПрочитатьФайлИСохранитьНаДискExtendedTooltip" id="38"/>
+		</Button>
+		<UsualGroup name="ГруппаАудио" id="41" DisplayImportance="High">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аудио</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аудио</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаАудиоРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<Button name="СделатьИЗаписать" id="43">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СделатьАудиозаписьИЗаписать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сделать новое</v8:content>
+						</v8:item>
+					</Title>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ButtonImportance>Optional</ButtonImportance>
+					<ExtendedTooltip name="СделатьИЗаписатьРасширеннаяПодсказка" id="44"/>
+				</Button>
+				<Button name="ДобавитьСохраненноеАудиоИЗаписать" id="45">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ДобавитьСохраненноеАудиоИЗаписать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить cохраненное</v8:content>
+						</v8:item>
+					</Title>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ButtonImportance>Optional</ButtonImportance>
+					<ExtendedTooltip name="ДобавитьСохраненноеАудиоИЗаписатьРасширеннаяПодсказка" id="46"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВидео" id="47" DisplayImportance="High">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видео</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видео</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаВидеоРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Button name="СделатьВидеозаписьИЗаписать" id="49">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СделатьВидеозаписьИЗаписать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сделать новое</v8:content>
+						</v8:item>
+					</Title>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ButtonImportance>Optional</ButtonImportance>
+					<ExtendedTooltip name="СделатьВидеозаписьИЗаписатьРасширеннаяПодсказка" id="50"/>
+				</Button>
+				<Button name="ДобавитьСохраненноеВидеоИЗаписать" id="51">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ДобавитьСохраненноеВидеоИЗаписать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить cохраненное</v8:content>
+						</v8:item>
+					</Title>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ButtonImportance>Optional</ButtonImportance>
+					<ExtendedTooltip name="ДобавитьСохраненноеВидеоИЗаписатьРасширеннаяПодсказка" id="52"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаФото" id="53" DisplayImportance="High">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фото</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фото</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>HorizontalIfPossible</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаФотоРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<Button name="СделатьФотоснимокИЗаписать" id="55">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СделатьФотоснимокИЗаписать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сделать новое</v8:content>
+						</v8:item>
+					</Title>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ButtonImportance>Optional</ButtonImportance>
+					<ExtendedTooltip name="СделатьФотоснимокИЗаписатьРасширеннаяПодсказка" id="56"/>
+				</Button>
+				<Button name="ДобавитьСохраненноеФотоИЗаписать" id="57">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ДобавитьСохраненноеФотоИЗаписать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить cохраненное</v8:content>
+						</v8:item>
+					</Title>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ButtonImportance>Optional</ButtonImportance>
+					<ExtendedTooltip name="ДобавитьСохраненноеФотоИЗаписатьРасширеннаяПодсказка" id="58"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<ProgressBarField name="ИндикаторПрогресса" id="59">
+			<DataPath>ИндикаторПрогресса</DataPath>
+			<Visible>false</Visible>
+			<ShowPercent>true</ShowPercent>
+			<ContextMenu name="ИндикаторПрогрессаКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="ИндикаторПрогрессаРасширеннаяПодсказка" id="61"/>
+			<SelectedItemsActionsPanel name="ИндикаторПрогрессаПанельДействийВыделенныхСтрок" id="71"/>
+		</ProgressBarField>
+		<LabelField name="СообщениеОбОшибке" id="62">
+			<DataPath>СообщениеОбОшибке</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="СообщениеОбОшибкеКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="СообщениеОбОшибкеРасширеннаяПодсказка" id="64"/>
+			<SelectedItemsActionsPanel name="СообщениеОбОшибкеПанельДействийВыделенныхСтрок" id="72"/>
+		</LabelField>
 		<UsualGroup name="ГруппаФлажков" id="19">
 			<ReadOnly>true</ReadOnly>
 			<EnableContentChange>true</EnableContentChange>
@@ -111,6 +290,7 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПодписанКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ПодписанExtendedTooltip" id="35"/>
+					<SelectedItemsActionsPanel name="ПодписанПанельДействийВыделенныхСтрок" id="69"/>
 				</CheckBoxField>
 				<CheckBoxField name="Зашифрован" id="22">
 					<DataPath>Объект.Зашифрован</DataPath>
@@ -118,160 +298,10 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ЗашифрованКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ЗашифрованExtendedTooltip" id="36"/>
+					<SelectedItemsActionsPanel name="ЗашифрованПанельДействийВыделенныхСтрок" id="70"/>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
-		<Button name="ВыбратьФайлСДискаИЗаписать" id="6" DisplayImportance="High">
-			<Type>Hyperlink</Type>
-			<SkipOnInput>false</SkipOnInput>
-			<CommandName>Form.Command.ВыбратьФайлСДискаИЗаписать</CommandName>
-			<TextColor>#1C55AE</TextColor>
-			<BackColor>style:ButtonBackColor</BackColor>
-			<BorderColor>style:BorderColor</BorderColor>
-			<ExtendedTooltip name="ВыбратьФайлСДискаИЗаписатьExtendedTooltip" id="37"/>
-		</Button>
-		<Button name="ПрочитатьФайлИСохранитьНаДиск" id="7" DisplayImportance="High">
-			<Type>Hyperlink</Type>
-			<SkipOnInput>false</SkipOnInput>
-			<CommandName>Form.Command.ПрочитатьФайлИСохранитьНаДиск</CommandName>
-			<TextColor>#1C55AE</TextColor>
-			<BackColor>style:ButtonBackColor</BackColor>
-			<BorderColor>style:BorderColor</BorderColor>
-			<ExtendedTooltip name="ПрочитатьФайлИСохранитьНаДискExtendedTooltip" id="38"/>
-		</Button>
-		<UsualGroup name="ГруппаАудио" id="41" DisplayImportance="High">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Аудио</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Аудио</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Behavior>Usual</Behavior>
-			<ExtendedTooltip name="ГруппаАудиоРасширеннаяПодсказка" id="42"/>
-			<ChildItems>
-				<Button name="СделатьИЗаписать" id="43">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.СделатьАудиозаписьИЗаписать</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сделать новое</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="СделатьИЗаписатьРасширеннаяПодсказка" id="44"/>
-				</Button>
-				<Button name="ДобавитьСохраненноеАудиоИЗаписать" id="45">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.ДобавитьСохраненноеАудиоИЗаписать</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Добавить cохраненное</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ДобавитьСохраненноеАудиоИЗаписатьРасширеннаяПодсказка" id="46"/>
-				</Button>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаВидео" id="47" DisplayImportance="High">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Видео</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Видео</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Behavior>Usual</Behavior>
-			<ExtendedTooltip name="ГруппаВидеоРасширеннаяПодсказка" id="48"/>
-			<ChildItems>
-				<Button name="СделатьВидеозаписьИЗаписать" id="49">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.СделатьВидеозаписьИЗаписать</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сделать новое</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="СделатьВидеозаписьИЗаписатьРасширеннаяПодсказка" id="50"/>
-				</Button>
-				<Button name="ДобавитьСохраненноеВидеоИЗаписать" id="51">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.ДобавитьСохраненноеВидеоИЗаписать</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Добавить cохраненное</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ДобавитьСохраненноеВидеоИЗаписатьРасширеннаяПодсказка" id="52"/>
-				</Button>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаФото" id="53" DisplayImportance="High">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фото</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фото</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Behavior>Usual</Behavior>
-			<ExtendedTooltip name="ГруппаФотоРасширеннаяПодсказка" id="54"/>
-			<ChildItems>
-				<Button name="СделатьФотоснимокИЗаписать" id="55">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.СделатьФотоснимокИЗаписать</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сделать новое</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="СделатьФотоснимокИЗаписатьРасширеннаяПодсказка" id="56"/>
-				</Button>
-				<Button name="ДобавитьСохраненноеФотоИЗаписать" id="57">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.ДобавитьСохраненноеФотоИЗаписать</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Добавить cохраненное</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ДобавитьСохраненноеФотоИЗаписатьРасширеннаяПодсказка" id="58"/>
-				</Button>
-			</ChildItems>
-		</UsualGroup>
-		<ProgressBarField name="ИндикаторПрогресса" id="59">
-			<DataPath>ИндикаторПрогресса</DataPath>
-			<Visible>false</Visible>
-			<ShowPercent>true</ShowPercent>
-			<ContextMenu name="ИндикаторПрогрессаКонтекстноеМеню" id="60"/>
-			<ExtendedTooltip name="ИндикаторПрогрессаРасширеннаяПодсказка" id="61"/>
-		</ProgressBarField>
-		<LabelField name="СообщениеОбОшибке" id="62">
-			<DataPath>СообщениеОбОшибке</DataPath>
-			<Visible>false</Visible>
-			<ContextMenu name="СообщениеОбОшибкеКонтекстноеМеню" id="63"/>
-			<ExtendedTooltip name="СообщениеОбОшибкеРасширеннаяПодсказка" id="64"/>
-		</LabelField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -360,7 +390,12 @@
 					<v8:content>Выбрать файл с диска и записать</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьФайл</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ВыбратьФайлСДискаИЗаписать</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПрочитатьФайлИСохранитьНаДиск" id="2">
@@ -376,7 +411,12 @@
 					<v8:content>Прочитать файл и сохранить на диск</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СкачатьФайл</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ПрочитатьФайлИСохранитьНаДиск</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Подписать" id="3">
@@ -520,7 +560,12 @@
 					<v8:content>Сделать аудиозапись и записать</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Микрофон</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СделатьАудиозапись</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СделатьВидеозаписьИЗаписать" id="12">
@@ -536,7 +581,12 @@
 					<v8:content>Сделать видеозапись и записать</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.StartVideoconference</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СделатьВидеозапись</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СделатьФотоснимокИЗаписать" id="13">
@@ -552,7 +602,12 @@
 					<v8:content>Сделать фотоснимок и записать</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Фотокамера</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СделатьФотоснимок</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
